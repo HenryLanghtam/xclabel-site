@@ -636,9 +636,63 @@
     window.addEventListener('resize', preventHorizontalScroll);
     window.addEventListener('orientationchange', preventHorizontalScroll);
     
-    // Navigation toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function () {
-        document.body.classList.toggle('nav-open');
+    // Navigation toggle for mobile
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle) {
+        navToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            document.body.classList.toggle('nav-open');
+            setTimeout(ensureNavVisible, 50);
+        });
+    }
+    
+    // Ensure nav visibility
+    function ensureNavVisible() {
+        if (document.body.classList.contains('nav-open')) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+            if (nav) {
+                nav.style.display = 'flex';
+                nav.style.visibility = 'visible';
+                nav.style.opacity = '1';
+                nav.style.transform = 'translateX(0)';
+            }
+            navLinks.forEach(function(link) {
+                link.style.display = 'block';
+                link.style.visibility = 'visible';
+                link.style.opacity = '1';
+                link.style.pointerEvents = 'auto';
+                link.style.zIndex = '10001';
+            });
+        }
+    }
+    
+    // Watch for nav-open class changes
+    const bodyObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                setTimeout(ensureNavVisible, 10);
+            }
+        });
+    });
+    
+    if (document.body) {
+        bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    }
+    
+    // Close nav when clicking on links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 960) {
+                setTimeout(function() {
+                    document.body.classList.remove('nav-open');
+                }, 100);
+            }
+        });
+        link.style.pointerEvents = 'auto';
+        link.style.cursor = 'pointer';
     });
     
     // Set current year

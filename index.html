@@ -213,7 +213,27 @@
     if (navToggle) {
         navToggle.addEventListener('click', function (e) {
             e.stopPropagation();
+            e.preventDefault();
+            const isOpen = document.body.classList.contains('nav-open');
             document.body.classList.toggle('nav-open');
+            
+            // Force visibility of nav links
+            setTimeout(function() {
+                const nav = document.querySelector('nav');
+                const navLinks = document.querySelectorAll('nav a');
+                if (nav && navLinks.length > 0) {
+                    nav.style.display = 'flex';
+                    nav.style.visibility = 'visible';
+                    nav.style.opacity = '1';
+                    navLinks.forEach(function(link) {
+                        link.style.display = 'block';
+                        link.style.visibility = 'visible';
+                        link.style.opacity = '1';
+                        link.style.pointerEvents = 'auto';
+                        link.style.zIndex = '10001';
+                    });
+                }
+            }, 50);
         });
     }
     
@@ -222,7 +242,18 @@
         if (window.innerWidth <= 960 && document.body.classList.contains('nav-open')) {
             const nav = document.querySelector('nav');
             const navContent = document.querySelector('.nav-content');
-            if (nav && navContent && !navContent.contains(e.target)) {
+            const navToggle = document.querySelector('.nav-toggle');
+            
+            // Don't close if clicking on nav, nav links, or toggle button
+            if (nav && nav.contains(e.target)) {
+                return;
+            }
+            if (navToggle && navToggle.contains(e.target)) {
+                return;
+            }
+            
+            // Close menu if clicking outside
+            if (navContent && !navContent.contains(e.target)) {
                 document.body.classList.remove('nav-open');
             }
         }
@@ -230,11 +261,18 @@
     
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             if (window.innerWidth <= 960) {
-                document.body.classList.remove('nav-open');
+                // Small delay to allow navigation
+                setTimeout(function() {
+                    document.body.classList.remove('nav-open');
+                }, 100);
             }
         });
+        
+        // Ensure links are always clickable
+        link.style.pointerEvents = 'auto';
+        link.style.cursor = 'pointer';
     });
     
     // Close nav on window resize if menu is open
@@ -243,6 +281,40 @@
             document.body.classList.remove('nav-open');
         }
     });
+    
+    // Force nav visibility when menu opens
+    function ensureNavVisible() {
+        if (document.body.classList.contains('nav-open')) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+            if (nav) {
+                nav.style.display = 'flex';
+                nav.style.visibility = 'visible';
+                nav.style.opacity = '1';
+                nav.style.transform = 'translateX(0)';
+            }
+            navLinks.forEach(function(link) {
+                link.style.display = 'block';
+                link.style.visibility = 'visible';
+                link.style.opacity = '1';
+                link.style.pointerEvents = 'auto';
+                link.style.zIndex = '10001';
+            });
+        }
+    }
+    
+    // Watch for nav-open class changes
+    const bodyObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                setTimeout(ensureNavVisible, 10);
+            }
+        });
+    });
+    
+    if (document.body) {
+        bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    }
     
     // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
