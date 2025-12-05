@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="XCLABEL Airport - Complete AR Solution for Airports. Real-time navigation + contactless security verification. 40% faster checkpoints.">
+    <meta name="keywords" content="airport navigation, AR wayfinding, airport security, face recognition, indoor positioning, XCLABEL Airport">
+    <meta name="author" content="Marif Bergan">
+    <meta name="theme-color" content="#3b82f6">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>XCLABEL Airport – Spatial AR Navigation for Airports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+    <div class="container nav-content">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">XCLABEL</a></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#problem">Challenge</a>
+            <a href="#solution">Navigation</a>
+            <a href="#security">Security</a>
+            <a href="#technology">Technology</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#market">Market</a>
+            <a href="#contact" class="cta-btn">Request Demo</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="top">
+        <div class="container hero-content">
+            <div class="hero-copy">
+                <h1>XCLABEL Airport — Complete AR Solution for Airports</h1>
+                <p>
+                    Transform the passenger experience with real-time AR navigation, contactless security verification, 
+                    and seamless wayfinding. From check-in to boarding, powered by patent-protected face recognition 
+                    + BLE technology that makes airports smarter, safer, and more efficient.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn primary">Schedule Airport Demo</a>
+                    <a href="#solution" class="btn ghost">See How It Works</a>
+                </div>
+                <div class="hero-meta">
+                    <span>AR Navigation + Security</span>
+                    <span>Face Recognition + BLE</span>
+                    <span>Real-time Flight Integration</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="card">
+                    <h3>AR Navigation + Security</h3>
+                    <p>Real-time wayfinding + contactless security verification in one seamless experience.</p>
+                    <div class="billboard-preview">
+                        <div class="billboard-overlay">
+                            <span>🛡️ Security: Pre-cleared</span>
+                            <span>✈️ Gate B24 → 180m</span>
+                            <span>⏱️ Boarding in 25 min</span>
+                        </div>
+                    </div>
+                    <p class="metrics">
+                        <strong>40% faster</strong> security checkpoints · <strong>70% faster</strong> navigation<br>
+                        <strong>0.3s</strong> biometric verification · <strong>Multi-floor</strong> AR pathfinding
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-demo" id="solution">
+        <div class="container demo-grid">
+            <div class="demo-copy">
+                <span class="eyebrow">Live AR experience</span>
+                <h2>Never get lost in an airport again</h2>
+                <p>
+                    XCLABEL Airport uses advanced indoor positioning, BLE beacons, and AR overlays to guide 
+                    passengers seamlessly from check-in to gate, with real-time updates and contextual information.
+                </p>
+                <ul class="demo-highlights">
+                    <li><strong>Visual pathfinding:</strong> AR arrows and markers guide you turn-by-turn through the terminal.</li>
+                    <li><strong>Live flight sync:</strong> Automatic gate updates pushed directly to your AR view.</li>
+                    <li><strong>Contextual discovery:</strong> See restaurants, shops, lounges, and amenities along your route.</li>
+                    <li><strong>Accessibility features:</strong> Voice guidance, high contrast modes, and wheelchair-accessible routes.</li>
+                </ul>
+                <div class="demo-cta">
+                    <a href="#contact" class="btn primary">Request pilot program</a>
+                    <a href="#technology" class="btn ghost">Technical details</a>
+                </div>
+            </div>
+            <div class="demo-visual">
+                <div class="phone-frame">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <span class="phone-title">XCLABEL Airport</span>
+                            <span class="phone-meta">AR Navigation</span>
+                        </div>
+                        <div class="camera-view">
+                            <div class="camera-gradient"></div>
+                            <div class="overlay-card">
+                                <div class="overlay-header">
+                                    <span class="overlay-status">GATE B24</span>
+                                    <span class="overlay-count">180m</span>
+                                </div>
+                                <div class="overlay-subtitle">Boarding in 25 minutes</div>
+                                <div class="overlay-list">
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">↑</span>
+                                            <span>Go straight 120m</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span>Now</span>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">↰</span>
+                                            <span>Turn left at security</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span>Next</span>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">☕</span>
+                                            <span>Coffee shop on route</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span>View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay-footer">Switch to 3D view • Settings</div>
+                            </div>
+                            <div class="face-highlight" style="border-radius: 20%; width: 240px; height: 160px;"></div>
+                        </div>
+                        <div class="phone-footer">
+                            <span>3D View</span>
+                            <span>Map</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept" id="problem">
+        <div class="container">
+            <h2>The airport navigation challenge</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>Current passenger pain points</h3>
+                    <ul>
+                        <li>Complex multi-floor terminal layouts cause confusion and stress</li>
+                        <li>Traditional signage is static and not personalized</li>
+                        <li>Gate changes require manual checking and cause missed flights</li>
+                        <li>Language barriers complicate navigation for international travelers</li>
+                        <li>Finding amenities (food, restrooms, lounges) wastes precious time</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Airport operational challenges</h3>
+                    <ul>
+                        <li>High staff costs for passenger assistance and wayfinding</li>
+                        <li>Missed flights due to navigation issues affect operations</li>
+                        <li>Poor passenger experience impacts NPS and rankings</li>
+                        <li>Limited analytics on passenger flow and bottlenecks</li>
+                        <li>Difficult to monetize passenger journey effectively</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-demo security-section" id="security">
+        <div class="container demo-grid">
+            <div class="demo-visual">
+                <div class="phone-frame">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <span class="phone-title">XCLABEL Security</span>
+                            <span class="phone-meta">Checkpoint</span>
+                        </div>
+                        <div class="camera-view">
+                            <div class="camera-gradient"></div>
+                            <div class="overlay-card">
+                                <div class="overlay-header">
+                                    <span class="overlay-status" style="background: rgba(34, 197, 94, 0.28); border-color: rgba(34, 197, 94, 0.45);">VERIFIED</span>
+                                    <span class="overlay-count" style="color: rgba(34, 197, 94, 0.9);">✓</span>
+                                </div>
+                                <div class="overlay-subtitle">Identity confirmed • Boarding pass valid</div>
+                                <div class="overlay-list">
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">👤</span>
+                                            <span>Biometric match</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span style="color: rgba(34, 197, 94, 0.9);">✓</span>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">🎫</span>
+                                            <span>Boarding pass scan</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span style="color: rgba(34, 197, 94, 0.9);">✓</span>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-item">
+                                        <div class="overlay-label">
+                                            <span class="overlay-icon">🛡️</span>
+                                            <span>Security cleared</span>
+                                        </div>
+                                        <div class="overlay-actions">
+                                            <span style="color: rgba(34, 197, 94, 0.9);">✓</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay-footer">Proceed to Gate B24 • Est. 3 min walk</div>
+                            </div>
+                            <div class="face-highlight" style="border-color: rgba(34, 197, 94, 0.7); box-shadow: 0 0 45px rgba(34, 197, 94, 0.4);"></div>
+                        </div>
+                        <div class="phone-footer">
+                            <span>Fast Track</span>
+                            <span>Next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-copy">
+                <span class="eyebrow" style="border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.15);">Airport Security</span>
+                <h2>Seamless security with contactless verification</h2>
+                <p>
+                    XCLABEL Airport Security combines face recognition, BLE boarding pass sync, and real-time 
+                    verification to transform security checkpoints from bottlenecks into seamless touchpoints. 
+                    Passengers move faster, security staff work smarter.
+                </p>
+                <ul class="demo-highlights">
+                    <li><strong>Contactless identity verification:</strong> Face recognition matches passenger to boarding pass and ID in 0.3 seconds.</li>
+                    <li><strong>Pre-clearance notifications:</strong> Alert passengers of security status before arrival at checkpoint.</li>
+                    <li><strong>Smart queue management:</strong> AI-powered flow optimization reduces wait times by 40%.</li>
+                    <li><strong>Staff AR dashboard:</strong> Real-time alerts and passenger info overlays for security personnel.</li>
+                    <li><strong>Compliance & privacy:</strong> GDPR-compliant, encrypted biometric data with consent-first architecture.</li>
+                </ul>
+                <div class="demo-cta">
+                    <a href="#contact" class="btn primary">Request security demo</a>
+                    <a href="#technology" class="btn ghost">Security architecture</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features security-benefits">
+        <div class="container">
+            <h2>Airport Security: transforming safety and efficiency</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>⚡ Faster processing</h3>
+                    <p>40% reduction in security checkpoint wait times · Contactless verification eliminates physical document handling · Pre-verified passengers move through express lanes.</p>
+                </article>
+                <article>
+                    <h3>🛡️ Enhanced security</h3>
+                    <p>Multi-factor biometric verification · Real-time watchlist checking · Audit trail for every checkpoint interaction · Reduced human error in ID verification.</p>
+                </article>
+                <article>
+                    <h3>👥 Better passenger experience</h3>
+                    <p>No more fumbling for boarding passes · Clear AR instructions for checkpoint prep · Status notifications reduce anxiety · Priority lanes for pre-cleared travelers.</p>
+                </article>
+                <article>
+                    <h3>📊 Operational intelligence</h3>
+                    <p>Real-time queue analytics and predictions · Staff allocation optimization · Bottleneck identification · Throughput metrics and KPI dashboards.</p>
+                </article>
+                <article>
+                    <h3>💰 Cost savings</h3>
+                    <p>Reduced staffing needs at checkpoints · Decreased physical infrastructure (kiosks, scanners) · Lower operational overhead · Improved throughput = more revenue.</p>
+                </article>
+                <article>
+                    <h3>🔒 Privacy-first design</h3>
+                    <p>Biometric data encrypted end-to-end · No cloud storage of facial data · Automatic deletion after checkpoint · GDPR, CCPA, and BIPA compliant.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept">
+        <div class="container two-column">
+            <div>
+                <h2>Security checkpoint workflow</h2>
+                <p>From approach to clearance in under 5 seconds — the future of airport security.</p>
+                <ul class="timeline">
+                    <li>
+                        <span class="step">Step 1</span>
+                        <div>
+                            <h3>Pre-checkpoint notification</h3>
+                            <p>Passenger receives AR notification 50m before checkpoint: "Security ready • Express lane available".</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Step 2</span>
+                        <div>
+                            <h3>Automatic face recognition</h3>
+                            <p>Camera identifies passenger, pulls boarding pass via BLE, matches to biometric database in 0.3s.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Step 3</span>
+                        <div>
+                            <h3>Real-time verification</h3>
+                            <p>Cross-check with airline manifest, passport database, and security watchlists. Staff receives instant AR overlay with verification status.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Step 4</span>
+                        <div>
+                            <h3>Seamless clearance</h3>
+                            <p>Verified passengers see "CLEARED" in AR view, directed to express lane or standard screening. All data logged and encrypted.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card highlight">
+                <h3>Security features</h3>
+                <ul>
+                    <li><strong>Multi-factor biometrics</strong> — Face + fingerprint + boarding pass triangulation</li>
+                    <li><strong>Liveness detection</strong> — AI-powered anti-spoofing (masks, photos, videos)</li>
+                    <li><strong>Watchlist integration</strong> — Real-time API sync with TSA, Interpol, airline databases</li>
+                    <li><strong>Offline capability</strong> — Local processing for mission-critical security checks</li>
+                    <li><strong>Staff AR tools</strong> — Glasses/tablet overlay for hands-free verification</li>
+                    <li><strong>Audit & compliance</strong> — Immutable logs, encrypted storage, regulatory reporting</li>
+                </ul>
+                <div class="badge">TSA PreCheck compatible · Trusted Traveler integration · IATA compliant</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept" id="technology">
+        <div class="container two-column">
+            <div>
+                <h2>Advanced spatial AR technology</h2>
+                <p>XCLABEL Airport leverages computer vision, BLE beacons, and ARCore/ARKit for precise indoor positioning.</p>
+                <ul class="timeline">
+                    <li>
+                        <span class="step">01</span>
+                        <div>
+                            <h3>Indoor Positioning System</h3>
+                            <p>BLE beacon network + visual markers provide sub-meter accuracy across all terminal floors and zones.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">02</span>
+                        <div>
+                            <h3>Real-time AR Overlay</h3>
+                            <p>Directional arrows, distance markers, and contextual information rendered in real-time 3D space.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">03</span>
+                        <div>
+                            <h3>Flight Data Integration</h3>
+                            <p>Live sync with FIDS (Flight Information Display System) for instant gate changes and boarding alerts.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">04</span>
+                        <div>
+                            <h3>Analytics Dashboard</h3>
+                            <p>Heat maps, dwell times, and passenger flow analytics for airport operations and retail optimization.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card highlight">
+                <h3>Key capabilities</h3>
+                <ul>
+                    <li><strong>Multi-floor navigation</strong> — Seamless routing across levels with elevator/escalator detection</li>
+                    <li><strong>Offline mode</strong> — Core navigation works without internet connection</li>
+                    <li><strong>Multi-language</strong> — Auto-detect language or manual selection for 40+ languages</li>
+                    <li><strong>Accessibility</strong> — Voice guidance, wheelchair routes, and high-contrast modes</li>
+                    <li><strong>Retail integration</strong> — Promote shops and restaurants with AR overlays</li>
+                </ul>
+                <div class="badge">Compatible with iOS (ARKit) and Android (ARCore) · Cloud-based management</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="benefits">
+        <div class="container">
+            <h2>Benefits for airports and passengers</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>Enhanced passenger experience</h3>
+                    <p>Reduce stress and confusion with intuitive AR wayfinding. Passengers spend less time finding gates and more time enjoying amenities.</p>
+                </article>
+                <article>
+                    <h3>Reduced operational costs</h3>
+                    <p>Decrease reliance on staff for wayfinding assistance. Automated gate change notifications reduce missed flight rates.</p>
+                </article>
+                <article>
+                    <h3>Increased retail revenue</h3>
+                    <p>Targeted AR promotions guide passengers to shops and restaurants. Analytics optimize store placement and marketing.</p>
+                </article>
+                <article>
+                    <h3>Data-driven insights</h3>
+                    <p>Anonymous passenger flow analytics identify bottlenecks, optimize layouts, and improve terminal efficiency.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept" id="comparison">
+        <div class="container">
+            <h2>Why XCLABEL Airport leads the market</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>vs Traditional signage</h3>
+                    <ul>
+                        <li>Personalized routes vs one-size-fits-all directions</li>
+                        <li>Real-time updates vs static information</li>
+                        <li>Multi-language support vs limited signage translations</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>vs Mobile maps</h3>
+                    <ul>
+                        <li>AR overlay vs 2D map (easier to follow in 3D space)</li>
+                        <li>Turn-by-turn guidance vs static map reference</li>
+                        <li>Live flight sync vs manual gate checking</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>vs Other AR solutions</h3>
+                    <ul>
+                        <li>Patent-protected BLE + AR fusion technology</li>
+                        <li>Sub-meter accuracy vs 5-10m accuracy competitors</li>
+                        <li>Offline mode for areas with poor connectivity</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Competitive advantages</h3>
+                    <ul>
+                        <li>Built on proven XCLABEL platform with 60% adoption pilots</li>
+                        <li>Cloud-based management for easy deployment and updates</li>
+                        <li>White-label solution adaptable to any airport brand</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="market">
+        <div class="container">
+            <h2>Market opportunity</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>Global airport market</h3>
+                    <p>17,000+ airports worldwide · 500+ major international airports · 4.5B passengers annually (pre-pandemic levels).</p>
+                </article>
+                <article>
+                    <h3>Target segments</h3>
+                    <p>Tier 1: Top 100 airports (50M+ passengers/year) · Tier 2: Regional hubs · Tier 3: Transit stations and malls.</p>
+                </article>
+                <article>
+                    <h3>Revenue model</h3>
+                    <p>Airport licensing: $50K-$500K/year (navigation + security) · Security checkpoint module: +$100K-$300K/year · Retail promotions: $5-15 CPM · Analytics: $10K-25K/year.</p>
+                </article>
+                <article>
+                    <h3>Growth potential</h3>
+                    <p>Year 1: 10 airport pilots · Year 3: 100+ airports · Year 5: 500+ locations · TAM: $2.5B+ by 2030.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept" id="implementation">
+        <div class="container two-column">
+            <div>
+                <h2>Implementation roadmap</h2>
+                <ul class="timeline">
+                    <li>
+                        <span class="step">Phase 1</span>
+                        <div>
+                            <h3>Site survey & planning</h3>
+                            <p>Terminal mapping, security checkpoint analysis, BLE beacon placement design, FIDS + security systems integration planning (2-4 weeks).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Phase 2</span>
+                        <div>
+                            <h3>Infrastructure deployment</h3>
+                            <p>Install BLE beacons, deploy biometric cameras at checkpoints, configure cloud backend, integrate with airport and security systems (4-6 weeks).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Phase 3</span>
+                        <div>
+                            <h3>Testing & optimization</h3>
+                            <p>Internal testing, accuracy calibration, staff training, soft launch with passengers (2-3 weeks).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Phase 4</span>
+                        <div>
+                            <h3>Full launch & support</h3>
+                            <p>Public rollout, marketing campaign, ongoing analytics and optimization, 24/7 technical support.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card highlight">
+                <h3>Pilot program benefits</h3>
+                <ul>
+                    <li>50% discount on Year 1 licensing fees</li>
+                    <li>Priority support and feature development</li>
+                    <li>Co-marketing opportunities and case studies</li>
+                    <li>Early access to new features and updates</li>
+                    <li>Dedicated success manager</li>
+                    <li>Free analytics dashboard for pilot duration</li>
+                </ul>
+                <div class="badge">Limited to 10 airports · Q1-Q2 2025 deployment window</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="partnerships">
+        <div class="container">
+            <h2>Strategic partnerships</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>Airport operators</h3>
+                    <p>Turnkey white-label solution · Revenue sharing on retail promotions · Analytics for operational optimization.</p>
+                </article>
+                <article>
+                    <h3>Technology vendors</h3>
+                    <p>Integration with FIDS, BMS, and retail systems · API partnerships with mapping providers · IoT beacon suppliers.</p>
+                </article>
+                <article>
+                    <h3>Airlines</h3>
+                    <p>Branded passenger experience · Reduced missed flights · Premium features for loyalty members.</p>
+                </article>
+                <article>
+                    <h3>Retail & hospitality</h3>
+                    <p>AR-powered promotions and wayfinding · Targeted messaging based on passenger context · Performance analytics.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept" id="ip">
+        <div class="container two-column">
+            <div>
+                <h2>Intellectual property</h2>
+                <ul class="timeline">
+                    <li>
+                        <span class="step">Patent protection</span>
+                        <div>
+                            <h3>Core technology patented</h3>
+                            <p>BLE + computer vision + AR spatial overlay orchestration. Patent owned by Marif Bergan.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step">Technology advantage</span>
+                        <div>
+                            <h3>Built on proven XCLABEL platform</h3>
+                            <p>Same core technology powering successful digital networking solution with 60% adoption in pilots.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card highlight">
+                <h3>Why this matters</h3>
+                <ul>
+                    <li>Strong IP moat against competitors entering the market</li>
+                    <li>Proven technology de-risks airport deployment</li>
+                    <li>Platform approach enables rapid feature development</li>
+                    <li>Privacy-first architecture meets GDPR and global standards</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <div class="container cta-content">
+            <div>
+                <h2>Ready to transform your airport experience?</h2>
+                <p>Join the pilot program and be among the first airports to deploy patent-protected AR navigation + security verification. Complete solution from check-in to boarding.</p>
+            </div>
+            <div>
+                <a class="btn primary" href="mailto:bergan.marif@xclabel.com?subject=XCLABEL Airport Pilot Program">bergan.marif@xclabel.com</a>
+                <p class="cta-note">or call +373 687 61110</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <span>© <span id="year"></span> XCLABEL Airport. Patent-protected AR Navigation Technology by Marif Bergan.</span>
+        <a href="mailto:bergan.marif@xclabel.com">Contact</a>
+    </div>
+</footer>
+
+<script>
+    // HTTPS redirect
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+    
+    // Navigation toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+        document.body.classList.toggle('nav-open');
+    });
+    
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
