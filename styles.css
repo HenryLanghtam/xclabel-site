@@ -143,6 +143,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -797,16 +798,19 @@ main {
         grid-template-columns: 1fr;
     }
 
-    /* Simple mobile nav - just show links, no burger menu */
+    /* Simple mobile nav - links in top right corner, compact */
     nav {
-        flex-direction: column;
-        gap: 0.8rem;
-        align-items: flex-end;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
     
     nav a {
-        font-size: 0.95rem;
-        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        white-space: nowrap;
     }
     
     /* Hide burger menu button on mobile */
