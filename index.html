@@ -208,43 +208,97 @@
         location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
     
-    // Navigation toggle for mobile
-    const navToggle = document.querySelector('.nav-toggle');
-    if (navToggle) {
-        navToggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-            const isOpen = document.body.classList.contains('nav-open');
-            document.body.classList.toggle('nav-open');
-            
-            // Force visibility of nav links
-            setTimeout(function() {
-                const nav = document.querySelector('nav');
-                const navLinks = document.querySelectorAll('nav a');
-                if (nav && navLinks.length > 0) {
+    // Navigation toggle for mobile - SIMPLIFIED VERSION
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        console.log('DOM loaded - Nav toggle:', navToggle);
+        console.log('DOM loaded - Nav:', nav);
+        console.log('DOM loaded - Nav links:', navLinks.length);
+        
+        if (navToggle && nav) {
+            navToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                
+                console.log('Toggle clicked!');
+                
+                // Toggle nav-open class
+                const isOpen = document.body.classList.contains('nav-open');
+                document.body.classList.toggle('nav-open');
+                
+                console.log('Nav-open class toggled. Is open:', !isOpen);
+                
+                // Force show menu immediately
+                if (!isOpen) {
+                    // Opening menu
                     nav.style.display = 'flex';
                     nav.style.visibility = 'visible';
                     nav.style.opacity = '1';
-                    navLinks.forEach(function(link) {
+                    nav.style.transform = 'translateX(0)';
+                    nav.style.zIndex = '10000';
+                    nav.style.position = 'fixed';
+                    nav.style.top = '0';
+                    nav.style.left = '0';
+                    nav.style.right = '0';
+                    nav.style.bottom = '0';
+                    
+                    console.log('Menu opening - nav style applied');
+                    
+                    // Show all links
+                    navLinks.forEach(function(link, index) {
                         link.style.display = 'block';
                         link.style.visibility = 'visible';
                         link.style.opacity = '1';
                         link.style.pointerEvents = 'auto';
                         link.style.zIndex = '10001';
+                        link.style.color = '#ffffff';
+                        link.style.position = 'relative';
+                        console.log('Link ' + index + ' styled:', link.textContent);
                     });
+                    
+                    console.log('Menu opened - all links should be visible now');
+                } else {
+                    // Closing menu
+                    nav.style.transform = 'translateX(100%)';
+                    console.log('Menu closing');
                 }
-            }, 50);
-        });
-    }
+            });
+        } else {
+            console.error('Nav toggle or nav element not found!');
+            console.error('Nav toggle:', navToggle);
+            console.error('Nav:', nav);
+        }
+        
+        // Also set up link click handlers
+        if (navLinks.length > 0) {
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 960) {
+                        setTimeout(function() {
+                            document.body.classList.remove('nav-open');
+                            if (nav) {
+                                nav.style.transform = 'translateX(100%)';
+                            }
+                        }, 200);
+                    }
+                });
+                
+                link.style.pointerEvents = 'auto';
+                link.style.cursor = 'pointer';
+                link.style.color = '#ffffff';
+            });
+        }
+    });
     
-    // Close nav when clicking outside or on a link (mobile)
+    // Close nav when clicking outside (on overlay)
     document.addEventListener('click', function(e) {
         if (window.innerWidth <= 960 && document.body.classList.contains('nav-open')) {
-            const nav = document.querySelector('nav');
-            const navContent = document.querySelector('.nav-content');
             const navToggle = document.querySelector('.nav-toggle');
             
-            // Don't close if clicking on nav, nav links, or toggle button
+            // Don't close if clicking on nav or toggle button
             if (nav && nav.contains(e.target)) {
                 return;
             }
@@ -253,26 +307,11 @@
             }
             
             // Close menu if clicking outside
-            if (navContent && !navContent.contains(e.target)) {
-                document.body.classList.remove('nav-open');
+            document.body.classList.remove('nav-open');
+            if (nav) {
+                nav.style.transform = 'translateX(100%)';
             }
         }
-    });
-    
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 960) {
-                // Small delay to allow navigation
-                setTimeout(function() {
-                    document.body.classList.remove('nav-open');
-                }, 100);
-            }
-        });
-        
-        // Ensure links are always clickable
-        link.style.pointerEvents = 'auto';
-        link.style.cursor = 'pointer';
     });
     
     // Close nav on window resize if menu is open
@@ -282,38 +321,12 @@
         }
     });
     
-    // Force nav visibility when menu opens
-    function ensureNavVisible() {
-        if (document.body.classList.contains('nav-open')) {
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelectorAll('nav a');
-            if (nav) {
-                nav.style.display = 'flex';
-                nav.style.visibility = 'visible';
-                nav.style.opacity = '1';
-                nav.style.transform = 'translateX(0)';
-            }
-            navLinks.forEach(function(link) {
-                link.style.display = 'block';
-                link.style.visibility = 'visible';
-                link.style.opacity = '1';
-                link.style.pointerEvents = 'auto';
-                link.style.zIndex = '10001';
-            });
-        }
-    }
-    
-    // Watch for nav-open class changes
-    const bodyObserver = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                setTimeout(ensureNavVisible, 10);
-            }
-        });
-    });
-    
-    if (document.body) {
-        bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    // Debug: Log menu state
+    if (window.innerWidth <= 960) {
+        console.log('Mobile view detected');
+        console.log('Nav element:', nav);
+        console.log('Nav links count:', navLinks.length);
+        console.log('Nav toggle:', navToggle);
     }
     
     // Set current year
