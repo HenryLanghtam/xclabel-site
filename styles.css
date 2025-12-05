@@ -143,9 +143,6 @@ nav {
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    flex-shrink: 0;
 }
 
 nav a {
@@ -800,165 +797,21 @@ main {
         grid-template-columns: 1fr;
     }
 
-    /* Hide nav by default on mobile, show only when menu is open */
+    /* Simple mobile nav - just show links, no burger menu */
     nav {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        background: rgba(4, 6, 21, 0.99) !important;
-        backdrop-filter: blur(25px) !important;
-        flex-direction: column !important;
-        padding: 5rem 1.5rem 2rem !important;
-        gap: 1rem !important;
-        transform: translateX(100%) !important;
-        transition: transform 0.3s ease !important;
-        z-index: 10000 !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        -webkit-overflow-scrolling: touch !important;
-        display: none !important; /* Hidden by default */
-        visibility: hidden !important;
-        opacity: 0 !important;
-        box-sizing: border-box !important;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-end;
     }
     
-    /* Show nav when menu is open */
-    body.nav-open nav {
-        transform: translateX(0) !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        display: flex !important;
-    }
-    
-    /* Ensure nav links are visible when menu is open */
-    body.nav-open nav a {
-        visibility: visible !important;
-        opacity: 1 !important;
-        display: block !important;
-        pointer-events: auto !important;
-        z-index: 10001 !important;
-        position: relative !important;
-        color: #ffffff !important;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.45)) !important;
-    }
-    
-    /* Make sure nav is visible when open */
-    body.nav-open nav {
-        transform: translateX(0) !important;
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    /* Overlay when menu is open */
-    body.nav-open::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 9999;
-        pointer-events: auto;
-    }
-
     nav a {
-        font-size: 1.8rem !important;
-        font-weight: 700 !important;
-        padding: 2rem 2.5rem !important;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
-        width: 100% !important;
-        text-align: left !important;
-        color: #ffffff !important;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.45)) !important;
-        border-radius: 16px !important;
-        margin-bottom: 1.5rem !important;
-        transition: all 0.3s ease !important;
-        display: block !important;
-        text-decoration: none !important;
-        border-left: 6px solid #60a5fa !important;
-        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 0 10px rgba(59, 130, 246, 0.5) !important;
-        letter-spacing: 0.5px !important;
-        position: relative !important;
-        z-index: 10001 !important;
-        pointer-events: auto !important;
-        cursor: pointer !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        min-height: 70px !important;
-        line-height: 1.5 !important;
-        -webkit-tap-highlight-color: rgba(59, 130, 246, 0.5) !important;
+        font-size: 0.95rem;
+        padding: 0.5rem 0.8rem;
     }
     
-    nav a:hover,
-    nav a:active,
-    nav a:focus {
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.35)) !important;
-        color: #ffffff !important;
-        transform: translateX(8px) !important;
-        border-left-color: #ffffff !important;
-        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
-    }
-    
-    nav a:last-child {
-        border-bottom: none !important;
-        margin-bottom: 0 !important;
-    }
-
+    /* Hide burger menu button on mobile */
     .nav-toggle {
-        display: flex !important;
-        z-index: 10002 !important;
-        position: relative !important;
-        padding: 0.5rem !important;
-        margin-right: -0.5rem !important;
-        cursor: pointer !important;
-        pointer-events: auto !important;
-        background: transparent !important;
-        border: none !important;
-        outline: none !important;
-    }
-    
-    .nav-toggle span {
-        background: #ffffff !important;
-        width: 28px !important;
-        height: 3px !important;
-        display: block !important;
-    }
-    
-    /* Make sure toggle button is always visible on mobile */
-    @media (max-width: 960px) {
-        .nav-toggle {
-            display: flex !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-    }
-
-    body.nav-open nav {
-        transform: translateX(0);
-    }
-
-    body.nav-open .nav-toggle span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    body.nav-open .nav-toggle span:nth-child(2) {
-        opacity: 0;
-    }
-
-    body.nav-open .nav-toggle span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-    }
-    
-    /* Prevent body scroll when menu is open */
-    body.nav-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        height: 100%;
+        display: none !important;
     }
     
     /* Prevent horizontal scroll on mobile */
