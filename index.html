@@ -20,36 +20,44 @@
 <body>
 
 <!-- NAVIGATION -->
-<header class="nav">
+<header class="nav" id="site-nav">
     <div class="container nav-content">
         <div class="logo">XCLABEL</div>
 
-        <nav id="main-nav">
-            <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+        <!-- Desktop links -->
+        <nav class="nav-links">
             <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
             <a href="#solutions" data-i18n="nav.solutions">Solutions</a>
             <a href="owlhoot.html" data-i18n="nav.oht">Owl Hoot Tech</a>
-            <a href="#contact" class="cta-btn" data-i18n="nav.contact">Contact</a>
-            <!-- Mobile-only lang switcher inside nav -->
-            <div class="nav-lang-mobile">
+            <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <!-- Right side: lang + hamburger -->
+        <div class="nav-right">
+            <div class="lang-switcher">
                 <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
                 <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
                 <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
             </div>
-        </nav>
-
-        <!-- Desktop lang switcher -->
-        <div class="lang-switcher">
-            <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-            <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
-            <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
-        </button>
     </div>
 </header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobile-nav">
+    <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+    <a href="#solutions" data-i18n="nav.solutions">Solutions</a>
+    <a href="owlhoot.html" data-i18n="nav.oht">Owl Hoot Tech</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+    <div class="mobile-lang">
+        <button class="lang-btn" data-lang="en" onclick="setLang('en');closeMobileNav()">EN</button>
+        <button class="lang-btn" data-lang="ru" onclick="setLang('ru');closeMobileNav()">RU</button>
+        <button class="lang-btn" data-lang="ro" onclick="setLang('ro');closeMobileNav()">RO</button>
+    </div>
+</div>
 
 <main>
     <!-- HERO -->
@@ -278,65 +286,48 @@
 
 <script src="lang.js"></script>
 <script>
-    // HTTPS redirect
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        location.replace('https:' + window.location.href.substring(window.location.protocol.length));
-    }
+    // Nav scroll effect
+    const siteNav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+        siteNav && siteNav.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
 
-    // Set current year in footer
-    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+    // Mobile nav
+    const navToggle  = document.getElementById('nav-toggle');
+    const mobileNav  = document.getElementById('mobile-nav');
 
-    // Mobile nav toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navClose  = document.getElementById('nav-close');
-    const mainNav   = document.getElementById('main-nav');
-
-    function openNav() {
-        document.body.classList.add('nav-open');
-        navToggle && navToggle.classList.add('open');
+    function openMobileNav() {
+        mobileNav.classList.add('open');
+        navToggle.classList.add('open');
         document.body.style.overflow = 'hidden';
     }
-    function closeNav() {
-        document.body.classList.remove('nav-open');
-        navToggle && navToggle.classList.remove('open');
+    function closeMobileNav() {
+        mobileNav.classList.remove('open');
+        navToggle.classList.remove('open');
         document.body.style.overflow = '';
     }
 
-    navToggle && navToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        document.body.classList.contains('nav-open') ? closeNav() : openNav();
+    navToggle.addEventListener('click', () => {
+        mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
     });
 
-    navClose && navClose.addEventListener('click', closeNav);
+    // Close on any link inside overlay
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
 
-    // Close nav on link click
-    mainNav && mainNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) closeNav();
-        });
-    });
-
-    // Close on overlay click (click outside nav)
-    document.addEventListener('click', function(e) {
-        if (document.body.classList.contains('nav-open') && mainNav && !mainNav.contains(e.target) && !navToggle.contains(e.target)) {
-            closeNav();
+    // Close when clicking outside
+    document.addEventListener('click', e => {
+        if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !navToggle.contains(e.target)) {
+            closeMobileNav();
         }
     });
 
-    // Prevent horizontal scroll
-    function preventHorizontalScroll() {
-        document.documentElement.style.overflowX = 'hidden';
-        document.body.style.overflowX = 'hidden';
-    }
-    preventHorizontalScroll();
-    window.addEventListener('resize', preventHorizontalScroll);
-
-    // Mobile video optimization
+    // Mobile video
     const video = document.querySelector('.hero-video');
-    if (video) {
-        video.setAttribute('playsinline', '');
-        video.setAttribute('webkit-playsinline', '');
-    }
+    if (video) { video.setAttribute('playsinline', ''); video.setAttribute('webkit-playsinline', ''); }
+
+    // Prevent horizontal scroll
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
 </script>
 </body>
 </html>
