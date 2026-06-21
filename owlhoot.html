@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Owl Hoot Tech — European deep-tech studio building 10 specialised enterprise software products. ERP, BI, RPA, AR, logistics, crypto and more.">
+    <meta name="keywords" content="Owl Hoot Tech, enterprise software, XCLABEL, ERP, BI, RPA, AR, logistics, invest, partner">
+    <meta name="author" content="Marif Bergan">
+    <meta name="theme-color" content="#1A73E8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Owl Hoot Tech — Enterprise Software Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header class="nav">
+    <div class="container nav-content">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">OWL HOOT TECH</a></div>
+
+        <nav id="main-nav">
+            <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="xclabel.html">XCLABEL</a>
+            <a href="airport.html">XCLABEL Airport</a>
+            <a href="#products" data-i18n="oht.products.h2">Our 10 Products</a>
+            <a href="#investors" data-i18n="oht.inv.h2">For Investors</a>
+            <a href="#partners" data-i18n="oht.partner.h2">Partners</a>
+            <a href="#contact" class="cta-btn" data-i18n="nav.contact">Contact</a>
+            <div class="nav-lang-mobile">
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+                <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+            </div>
+        </nav>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+    <section class="oht-hero">
+        <div class="container oht-hero-content">
+            <div class="oht-logo-badge">
+                <!-- Simple OHT owl icon inline -->
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="9" r="7" fill="none" stroke="#93c5fd" stroke-width="1.5"/>
+                    <circle cx="8.5" cy="8" r="2" fill="#93c5fd"/>
+                    <circle cx="13.5" cy="8" r="2" fill="#93c5fd"/>
+                    <circle cx="8.5" cy="8" r="1" fill="#0D1B2A"/>
+                    <circle cx="13.5" cy="8" r="1" fill="#0D1B2A"/>
+                    <path d="M9.5 10.5 Q11 12 12.5 10.5" stroke="#93c5fd" stroke-width="1" stroke-linecap="round" fill="none"/>
+                    <path d="M5 17 Q11 21 17 17" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                </svg>
+                Owl Hoot Tech
+            </div>
+
+            <h1 data-i18n="oht.h1">Owl Hoot Tech</h1>
+            <p class="oht-hero-sub" data-i18n="oht.h1.sub">Building Tomorrow's Enterprise Software — Today.</p>
+            <p data-i18n="oht.h1.p">
+                A European deep-tech studio with 10 specialised enterprise software products across AR, logistics,
+                ERP, BI, RPA, crypto, and communication. Targeting EUR 400B+ in combined addressable markets.
+            </p>
+            <div class="oht-hero-actions">
+                <a href="#investors" class="btn primary" data-i18n="oht.h1.btn1">Investor Information</a>
+                <a href="#partners" class="btn ghost" data-i18n="oht.h1.btn2">Become a Partner</a>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="oht-stats-bar">
+                <div class="oht-stat-item">
+                    <strong>10</strong>
+                    <span>Products</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 400B+</strong>
+                    <span>Combined TAM</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 8.4M</strong>
+                    <span>ARR Projection Y3</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 2–15M</strong>
+                    <span>Seed Round</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MISSION & VISION ──────────────────────────────────────────────────── -->
+    <section class="oht-mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="icon">🎯</div>
+                    <h2 data-i18n="oht.mission.h2">Our Mission</h2>
+                    <p data-i18n="oht.mission.p">
+                        To deliver purposefully engineered software solutions — each product solves a specific
+                        high-value problem for enterprise customers, with the quality, security, and scalability
+                        that modern organisations demand.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="icon">🦉</div>
+                    <h2 data-i18n="oht.vision.h2">Our Vision</h2>
+                    <p data-i18n="oht.vision.p">
+                        To become the leading European deep-tech studio building hyper-specialised enterprise
+                        software that transforms how businesses operate, communicate, and compete globally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PRODUCTS ──────────────────────────────────────────────────────────── -->
+    <section class="oht-products" id="products">
+        <div class="container">
+            <div class="section-tag">Portfolio</div>
+            <h2 class="section-heading" data-i18n="oht.products.h2">Our 10 Products</h2>
+            <p class="section-sub" data-i18n="oht.products.sub">
+                Each product is the best tool for its specific job — deeply specialised, cloud-native, and built to enterprise standards.
+            </p>
+
+            <div class="oht-products-grid">
+
+                <a href="xclabel.html" class="oht-product-card">
+                    <div class="product-tag">AR · Retail</div>
+                    <h3>XCLABEL</h3>
+                    <p>Augmented reality price labels and smart AR billboards with face recognition + BLE for retail and digital networking.</p>
+                </a>
+
+                <a href="airport.html" class="oht-product-card">
+                    <div class="product-tag">AR · Aviation</div>
+                    <h3>XCLABEL Airport</h3>
+                    <p>AR wayfinding and contactless security verification for international airports. 40% faster checkpoints, real-time gate updates.</p>
+                </a>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">ERP · SME</div>
+                    <h3>Perch ERP</h3>
+                    <p>Lightweight cloud-native ERP for SMEs: finance, inventory, HR, CRM, and procurement in one platform. Onboards in 3 days.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">BI · Analytics</div>
+                    <h3>Strix BI</h3>
+                    <p>Self-service business intelligence: 50+ connectors, drag-and-drop dashboards, AI anomaly detection, and scheduled reports.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">RPA · Automation</div>
+                    <h3>Glide RPA</h3>
+                    <p>No-code robotic process automation. Record, edit, and deploy bots in hours. OCR document intelligence, 100+ app integrations.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">Crypto · DeFi</div>
+                    <h3>Hollow</h3>
+                    <p>Non-custodial multi-chain crypto wallet with built-in DEX aggregator, staking, yield farming, and NFT management.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">Comms · Enterprise</div>
+                    <h3>Telepat</h3>
+                    <p>End-to-end encrypted enterprise messaging, voice, and video. GDPR-compliant, self-hosted option for regulated industries.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">PM · Dev Tools</div>
+                    <h3>xProj</h3>
+                    <p>Agile project management built for engineers. Native GitHub/GitLab integration, sprint planning, AI-powered task estimation.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">Mobile · Hardware</div>
+                    <h3>XCDock</h3>
+                    <p>Ruggedised docking stations that turn Android phones into enterprise terminals. MDM platform + WMS integration. 60-70% cheaper than rugged handhelds.</p>
+                </div>
+
+                <div class="oht-product-card">
+                    <div class="product-tag">Logistics · Supply Chain</div>
+                    <h3>ICSWIGL</h3>
+                    <p>Intermodal freight platform: sea, air, road, and rail booking in one platform. Real-time tracking, automated documents, CO2 reporting, AI route optimization.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOR INVESTORS ─────────────────────────────────────────────────────── -->
+    <section class="oht-investors" id="investors">
+        <div class="container">
+            <div class="section-tag">Investors</div>
+            <h2 class="section-heading" data-i18n="oht.inv.h2">For Investors</h2>
+            <p class="section-sub" data-i18n="oht.inv.sub">
+                A rare opportunity: 10 enterprise software products, EUR 400B+ combined TAM, seeking EUR 2–15M seed funding.
+            </p>
+
+            <div class="investors-grid">
+                <!-- Investment Ask -->
+                <div class="inv-card">
+                    <h3 data-i18n="oht.inv.ask.h3">Investment Ask</h3>
+                    <div class="inv-table">
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.round">Round Type</span>
+                            <span class="inv-val" data-i18n="oht.inv.round.v">Seed / Pre-Series A</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.amount">Amount Sought</span>
+                            <span class="inv-val" data-i18n="oht.inv.amount.v">EUR 2M (minimum) — EUR 15M (full round)</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.val">Valuation (indicative)</span>
+                            <span class="inv-val" data-i18n="oht.inv.val.v">EUR 8–15M pre-money</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.use">Use of Proceeds</span>
+                            <span class="inv-val" data-i18n="oht.inv.use.v">Engineering (45%), Sales &amp; Marketing (25%), Operations (15%), Infrastructure (10%), Reserve (5%)</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.run">Runway</span>
+                            <span class="inv-val" data-i18n="oht.inv.run.v">18–24 months to Series A / cashflow breakeven on top products</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="mailto:bergan.marif@gmail.com?subject=OHT%20Investor%20Inquiry" class="btn primary" data-i18n="oht.inv.cta">Request Investor Deck</a>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="inv-card">
+                    <h3 data-i18n="oht.inv.metrics.h3">Key Metrics</h3>
+                    <div class="inv-table">
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m1">Products in portfolio</span>
+                            <span class="inv-val" data-i18n="oht.inv.m1.v">10 enterprise software products</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m2">Combined TAM</span>
+                            <span class="inv-val" data-i18n="oht.inv.m2.v">USD 304B+ globally</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m3">Y3 ARR projection</span>
+                            <span class="inv-val" data-i18n="oht.inv.m3.v">EUR 8.4M (combined portfolio)</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m4">Gross margin target</span>
+                            <span class="inv-val" data-i18n="oht.inv.m4.v">70–80% at scale (SaaS products)</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m5">Business model</span>
+                            <span class="inv-val" data-i18n="oht.inv.m5.v">SaaS + enterprise licence + professional services</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="inv-key" data-i18n="oht.inv.m6">Target markets</span>
+                            <span class="inv-val" data-i18n="oht.inv.m6.v">Europe, MENA, North America</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial highlight strip -->
+            <div class="oht-stats-bar" style="margin-top: 3rem; max-width: 100%;">
+                <div class="oht-stat-item">
+                    <strong>EUR 570K</strong>
+                    <span>ARR Year 1</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 2.6M</strong>
+                    <span>ARR Year 2</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 8.4M</strong>
+                    <span>ARR Year 3</span>
+                </div>
+                <div class="oht-stat-item">
+                    <strong>EUR 2.0M</strong>
+                    <span>EBITDA Year 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── BECOME A PARTNER ──────────────────────────────────────────────────── -->
+    <section class="oht-partners" id="partners">
+        <div class="container">
+            <div class="section-tag">Partnership</div>
+            <h2 class="section-heading" data-i18n="oht.partner.h2">Become a Partner</h2>
+            <p class="section-sub" data-i18n="oht.partner.sub">
+                We are actively seeking resellers, system integrators, and technology partners to expand
+                our reach across Europe and MENA.
+            </p>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <span class="partner-icon">🤝</span>
+                    <h3 data-i18n="oht.partner.1.h3">Reseller Partners</h3>
+                    <p data-i18n="oht.partner.1.p">Sell and implement OHT products under your brand. Competitive margins, full technical support, and co-marketing resources.</p>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-icon">🔗</span>
+                    <h3 data-i18n="oht.partner.2.h3">Technology Integration</h3>
+                    <p data-i18n="oht.partner.2.p">Connect your platform to OHT's products via our open APIs. Expand your offering with best-in-class specialised tools.</p>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-icon">📈</span>
+                    <h3 data-i18n="oht.partner.3.h3">Strategic Investment</h3>
+                    <p data-i18n="oht.partner.3.p">Co-invest and take an equity position. Access to full financial data, board observer rights, and co-development agreements.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="mailto:bergan.marif@gmail.com?subject=OHT%20Partnership%20Inquiry" class="btn primary" data-i18n="oht.partner.btn">Contact Us to Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT / CTA ─────────────────────────────────────────────────────── -->
+    <section class="cta" id="contact">
+        <div class="container cta-content">
+            <div>
+                <h2 data-i18n="oht.cta.h2">Ready to build something extraordinary?</h2>
+                <p data-i18n="oht.cta.p">Whether you are an investor, partner, or enterprise customer — we would love to hear from you.</p>
+            </div>
+            <div>
+                <a class="btn primary" href="mailto:bergan.marif@gmail.com">bergan.marif@gmail.com</a>
+                <p class="cta-note" data-i18n="cta.note">or call +373 687 61110</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <span data-i18n="oht.footer">© 2026 Owl Hoot Tech. All rights reserved.</span>
+        <div style="display:flex; gap:1.5rem; align-items:center;">
+            <a href="xclabel.html">XCLABEL</a>
+            <a href="airport.html">XCLABEL Airport</a>
+            <a href="mailto:bergan.marif@gmail.com" data-i18n="footer.contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<script src="lang.js"></script>
+<script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose  = document.getElementById('nav-close');
+        const mainNav   = document.getElementById('main-nav');
+
+        function openNav()  { document.body.classList.add('nav-open'); navToggle && navToggle.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeNav() { document.body.classList.remove('nav-open'); navToggle && navToggle.classList.remove('open'); document.body.style.overflow = ''; }
+
+        navToggle && navToggle.addEventListener('click', function(e) { e.stopPropagation(); document.body.classList.contains('nav-open') ? closeNav() : openNav(); });
+        navClose  && navClose.addEventListener('click', closeNav);
+        mainNav   && mainNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', function() { if (window.innerWidth <= 768) closeNav(); }); });
+        document.addEventListener('click', function(e) { if (document.body.classList.contains('nav-open') && mainNav && !mainNav.contains(e.target) && navToggle && !navToggle.contains(e.target)) closeNav(); });
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
+    });
+</script>
+</body>
+</html>

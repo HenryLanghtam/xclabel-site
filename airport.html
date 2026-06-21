@@ -21,17 +21,32 @@
 <header class="nav">
     <div class="container nav-content">
         <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">XCLABEL</a></div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#problem">Challenge</a>
-            <a href="#solution">Navigation</a>
-            <a href="#security">Security</a>
-            <a href="#technology">Technology</a>
-            <a href="#benefits">Benefits</a>
-            <a href="#market">Market</a>
-            <a href="#contact" class="cta-btn">Request Demo</a>
+
+        <nav id="main-nav">
+            <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="#problem" data-i18n="ap.nav.challenge">Challenge</a>
+            <a href="#solution" data-i18n="ap.nav.nav">Navigation</a>
+            <a href="#security" data-i18n="ap.nav.security">Security</a>
+            <a href="#technology" data-i18n="ap.nav.tech">Technology</a>
+            <a href="#benefits" data-i18n="ap.nav.benefits">Benefits</a>
+            <a href="#market" data-i18n="ap.nav.market">Market</a>
+            <a href="owlhoot.html" data-i18n="nav.oht">Owl Hoot Tech</a>
+            <a href="#contact" class="cta-btn" data-i18n="ap.nav.demo">Request Demo</a>
+            <div class="nav-lang-mobile">
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+                <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+            </div>
         </nav>
-        <button class="nav-toggle" aria-label="Toggle navigation">
+
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -41,20 +56,20 @@
     <section class="hero" id="top">
         <div class="container hero-content">
             <div class="hero-copy">
-                <h1>XCLABEL Airport — Complete AR Solution for Airports</h1>
-                <p>
-                    Transform the passenger experience with real-time AR navigation, contactless security verification, 
-                    and seamless wayfinding. From check-in to boarding, powered by patent-protected face recognition 
+                <h1 data-i18n="ap.h1">XCLABEL Airport — Complete AR Solution for Airports</h1>
+                <p data-i18n="ap.h1.p">
+                    Transform the passenger experience with real-time AR navigation, contactless security verification,
+                    and seamless wayfinding. From check-in to boarding, powered by patent-protected face recognition
                     + BLE technology that makes airports smarter, safer, and more efficient.
                 </p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn primary">Schedule Airport Demo</a>
-                    <a href="#solution" class="btn ghost">See How It Works</a>
+                    <a href="#contact" class="btn primary" data-i18n="ap.btn1">Schedule Airport Demo</a>
+                    <a href="#solution" class="btn ghost" data-i18n="ap.btn2">See How It Works</a>
                 </div>
                 <div class="hero-meta">
-                    <span>AR Navigation + Security</span>
-                    <span>Face Recognition + BLE</span>
-                    <span>Real-time Flight Integration</span>
+                    <span data-i18n="ap.m1">Patent owned by Marif Bergan</span>
+                    <span data-i18n="ap.m2">AR Navigation + Face Recognition + BLE</span>
+                    <span data-i18n="ap.m3">40% Faster Checkpoints</span>
                 </div>
             </div>
             <div class="hero-visual">
@@ -614,89 +629,26 @@
     </div>
 </footer>
 
+<script src="lang.js"></script>
 <script>
-    // HTTPS redirect
     if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
-    
-    // Prevent horizontal scroll on mobile
-    function preventHorizontalScroll() {
-        if (window.innerWidth <= 960) {
-            document.documentElement.style.overflowX = 'hidden';
-            document.body.style.overflowX = 'hidden';
-            document.documentElement.style.width = '100%';
-            document.body.style.width = '100%';
-            document.documentElement.style.maxWidth = '100vw';
-            document.body.style.maxWidth = '100vw';
-        }
-    }
-    
-    preventHorizontalScroll();
-    window.addEventListener('resize', preventHorizontalScroll);
-    window.addEventListener('orientationchange', preventHorizontalScroll);
-    
-    // Navigation toggle for mobile
-    const navToggle = document.querySelector('.nav-toggle');
-    if (navToggle) {
-        navToggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-            document.body.classList.toggle('nav-open');
-            setTimeout(ensureNavVisible, 50);
-        });
-    }
-    
-    // Ensure nav visibility
-    function ensureNavVisible() {
-        if (document.body.classList.contains('nav-open')) {
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelectorAll('nav a');
-            if (nav) {
-                nav.style.display = 'flex';
-                nav.style.visibility = 'visible';
-                nav.style.opacity = '1';
-                nav.style.transform = 'translateX(0)';
-            }
-            navLinks.forEach(function(link) {
-                link.style.display = 'block';
-                link.style.visibility = 'visible';
-                link.style.opacity = '1';
-                link.style.pointerEvents = 'auto';
-                link.style.zIndex = '10001';
-            });
-        }
-    }
-    
-    // Watch for nav-open class changes
-    const bodyObserver = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                setTimeout(ensureNavVisible, 10);
-            }
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        const year = document.getElementById('year');
+        if (year) year.textContent = new Date().getFullYear();
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose  = document.getElementById('nav-close');
+        const mainNav   = document.getElementById('main-nav');
+        function openNav()  { document.body.classList.add('nav-open'); navToggle && navToggle.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeNav() { document.body.classList.remove('nav-open'); navToggle && navToggle.classList.remove('open'); document.body.style.overflow = ''; }
+        navToggle && navToggle.addEventListener('click', function(e) { e.stopPropagation(); document.body.classList.contains('nav-open') ? closeNav() : openNav(); });
+        navClose  && navClose.addEventListener('click', closeNav);
+        mainNav   && mainNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', function() { if (window.innerWidth <= 768) closeNav(); }); });
+        document.addEventListener('click', function(e) { if (document.body.classList.contains('nav-open') && mainNav && !mainNav.contains(e.target) && navToggle && !navToggle.contains(e.target)) closeNav(); });
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
     });
-    
-    if (document.body) {
-        bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    }
-    
-    // Close nav when clicking on links
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 960) {
-                setTimeout(function() {
-                    document.body.classList.remove('nav-open');
-                }, 100);
-            }
-        });
-        link.style.pointerEvents = 'auto';
-        link.style.cursor = 'pointer';
-    });
-    
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

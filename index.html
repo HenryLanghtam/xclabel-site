@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="XCLABEL - Revolutionary AR-Powered Solutions for digital networking and airport navigation. Patent-protected face recognition + BLE technology.">
-    <meta name="keywords" content="AR, augmented reality, digital networking, airport navigation, face recognition, BLE, XCLABEL">
+    <meta name="keywords" content="AR, augmented reality, digital networking, airport navigation, face recognition, BLE, XCLABEL, Owl Hoot Tech">
     <meta name="author" content="Marif Bergan">
     <meta name="theme-color" content="#3b82f6">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -15,32 +15,54 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- NAVIGATION -->
 <header class="nav">
     <div class="container nav-content">
         <div class="logo">XCLABEL</div>
-        <nav>
-            <a href="#solutions">Solutions</a>
-            <a href="#contact">Contact</a>
+
+        <nav id="main-nav">
+            <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+            <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+            <a href="#solutions" data-i18n="nav.solutions">Solutions</a>
+            <a href="owlhoot.html" data-i18n="nav.oht">Owl Hoot Tech</a>
+            <a href="#contact" class="cta-btn" data-i18n="nav.contact">Contact</a>
+            <!-- Mobile-only lang switcher inside nav -->
+            <div class="nav-lang-mobile">
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+                <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+            </div>
         </nav>
+
+        <!-- Desktop lang switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn" data-lang="ro" onclick="setLang('ro')">RO</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
 <main>
+    <!-- HERO -->
     <section class="hero-landing" id="top">
         <div class="container hero-landing-content">
             <div class="hero-landing-header">
                 <div class="hero-video-container">
-                    <video autoplay muted loop playsinline class="hero-video" preload="auto" poster="">
+                    <video autoplay muted loop playsinline class="hero-video" preload="auto">
                         <source src="XCLABEL V.mp4" type="video/mp4">
-                        <!-- Fallback to text if video doesn't load -->
-                        <h1>XCLABEL</h1>
                     </video>
                 </div>
-                <p class="hero-landing-tagline">Revolutionary AR-Powered Solutions</p>
-                <p class="hero-landing-description">
+                <p class="hero-landing-tagline" data-i18n="idx.tagline">Revolutionary AR-Powered Solutions</p>
+                <p class="hero-landing-description" data-i18n="idx.desc">
                     Patent-protected technology transforming digital networking and spatial experiences.
                     Choose your solution below.
                 </p>
@@ -48,16 +70,19 @@
         </div>
     </section>
 
+    <!-- SOLUTIONS -->
     <section class="solutions-selector" id="solutions">
         <div class="container">
-            <h2 class="solutions-title">Choose Your Solution</h2>
-            <div class="solutions-grid">
-                <!-- XCLABEL Main Solution -->
+            <h2 class="solutions-title" data-i18n="idx.choose">Choose Your Solution</h2>
+
+            <div class="solutions-grid three-col">
+
+                <!-- XCLABEL card -->
                 <article class="solution-card">
                     <div class="solution-icon">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="https://www.w3.org/2000/svg">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="64" height="64" rx="16" fill="url(#grad1)"/>
-                            <path d="M32 20C26.4772 20 22 24.4772 22 30C22 35.5228 26.4772 40 32 40C37.5228 40 42 35.5228 42 30C42 24.4772 37.5228 20 32 20Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M32 20C26.477 20 22 24.477 22 30C22 35.523 26.477 40 32 40C37.523 40 42 35.523 42 30C42 24.477 37.523 20 32 20Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
                             <path d="M27 30L30 33L37 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M22 44H42" stroke="white" stroke-width="2" stroke-linecap="round"/>
                             <defs>
@@ -69,9 +94,9 @@
                         </svg>
                     </div>
                     <h3>XCLABEL</h3>
-                    <p class="solution-subtitle">Digital Networking & AR Billboards</p>
-                    <p class="solution-description">
-                        Instant face recognition + BLE = automatic digital business cards + smart AR billboards that can't be blocked. 
+                    <p class="solution-subtitle" data-i18n="xc.subtitle">Digital Networking & AR Billboards</p>
+                    <p class="solution-description" data-i18n="xc.desc">
+                        Instant face recognition + BLE = automatic digital business cards + smart AR billboards that can't be blocked.
                         For enterprises, creators, dating events, and retail.
                     </p>
                     <div class="solution-highlights">
@@ -82,33 +107,30 @@
                     <div class="solution-stats">
                         <div class="stat">
                             <strong>$50B+</strong>
-                            <span>Market Opportunity</span>
+                            <span data-i18n="xc.stat1.label">Market Opportunity</span>
                         </div>
                         <div class="stat">
                             <strong>0.3s</strong>
-                            <span>Connection Time</span>
+                            <span data-i18n="xc.stat2.label">Connection Time</span>
                         </div>
                         <div class="stat">
                             <strong>10m</strong>
-                            <span>BLE Range</span>
+                            <span data-i18n="xc.stat3.label">BLE Range</span>
                         </div>
                     </div>
-                    <a href="xclabel.html" class="btn primary solution-btn">Explore XCLABEL</a>
+                    <a href="xclabel.html" class="btn primary solution-btn" data-i18n="xc.btn">Explore XCLABEL</a>
                 </article>
 
-                <!-- XCLABEL Airport Solution -->
+                <!-- XCLABEL Airport card -->
                 <article class="solution-card">
                     <div class="solution-icon airport">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="https://www.w3.org/2000/svg">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="64" height="64" rx="16" fill="url(#grad2)"/>
-                            <!-- Airplane -->
                             <path d="M32 16L40 24H35V34H29V24H24L32 16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M18 42H46" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                            <!-- Security Shield -->
-                            <path d="M48 20L48 28C48 32 45 35 42 36C45 35 48 32 48 28L48 20Z" fill="white" fill-opacity="0.9"/>
-                            <path d="M42 20V28C42 31 44 33 46 34C44 33 42 31 42 28V20H42Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <!-- Checkmark in shield -->
-                            <path d="M43.5 26L44.5 27L46.5 24" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M46 22V30C46 33 44 35 41 36" fill="white" fill-opacity="0.9"/>
+                            <path d="M41 22V30C41 33 43 35 45 36" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M42.5 27L43.5 28L45.5 25" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <defs>
                                 <linearGradient id="grad2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
                                     <stop stop-color="#8b5cf6"/>
@@ -118,10 +140,10 @@
                         </svg>
                     </div>
                     <h3>XCLABEL Airport</h3>
-                    <p class="solution-subtitle">Complete AR Solution for Airports & Transit Hubs</p>
-                    <p class="solution-description">
-                        Real-time AR navigation + contactless security verification for airports. 
-                        Transform passenger experience with seamless wayfinding and 0.3-second biometric checkpoints. 
+                    <p class="solution-subtitle" data-i18n="ap.subtitle">Complete AR Solution for Airports & Transit Hubs</p>
+                    <p class="solution-description" data-i18n="ap.desc">
+                        Real-time AR navigation + contactless security verification for airports.
+                        Transform passenger experience with seamless wayfinding and 0.3-second biometric checkpoints.
                         Reduce security wait times by 40% while enhancing safety.
                     </p>
                     <div class="solution-highlights">
@@ -132,61 +154,116 @@
                     <div class="solution-stats">
                         <div class="stat">
                             <strong>40%</strong>
-                            <span>Faster Security</span>
+                            <span data-i18n="ap.stat1.label">Faster Security</span>
                         </div>
                         <div class="stat">
                             <strong>0.3s</strong>
-                            <span>Verification</span>
+                            <span data-i18n="ap.stat2.label">Verification</span>
                         </div>
                         <div class="stat">
                             <strong>Multi-Floor</strong>
-                            <span>AR Navigation</span>
+                            <span data-i18n="ap.stat3.label">AR Navigation</span>
                         </div>
                     </div>
-                    <a href="airport.html" class="btn primary solution-btn">Explore XCLABEL Airport</a>
+                    <a href="airport.html" class="btn primary solution-btn" data-i18n="ap.btn">Explore XCLABEL Airport</a>
                 </article>
+
+                <!-- OWL HOOT TECH card -->
+                <article class="solution-card oht-card">
+                    <div class="solution-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="16" fill="url(#grad3)"/>
+                            <!-- Owl silhouette -->
+                            <circle cx="32" cy="26" r="10" fill="none" stroke="white" stroke-width="2"/>
+                            <circle cx="28" cy="24" r="3" fill="white" fill-opacity="0.9"/>
+                            <circle cx="36" cy="24" r="3" fill="white" fill-opacity="0.9"/>
+                            <circle cx="28" cy="24" r="1.5" fill="#0D1B2A"/>
+                            <circle cx="36" cy="24" r="1.5" fill="#0D1B2A"/>
+                            <path d="M29.5 28.5 Q32 31 34.5 28.5" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                            <path d="M24 35 Q32 44 40 35" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                            <path d="M26 22 L24 18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M38 22 L40 18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="grad3" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0D1B2A"/>
+                                    <stop offset="1" stop-color="#1A73E8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Owl Hoot Tech</h3>
+                    <p class="solution-subtitle" data-i18n="oht.subtitle">Enterprise Software Studio — 10 Products</p>
+                    <p class="solution-description" data-i18n="oht.desc">
+                        The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software
+                        across ERP, BI, RPA, logistics, crypto, and communication —
+                        targeting EUR 400B+ in combined addressable markets.
+                    </p>
+                    <div class="solution-highlights">
+                        <span class="highlight-badge">10 Products</span>
+                        <span class="highlight-badge">EUR 400B+ TAM</span>
+                        <span class="highlight-badge">Seed Stage</span>
+                    </div>
+                    <div class="solution-stats">
+                        <div class="stat">
+                            <strong data-i18n="oht.stat1.val">10+</strong>
+                            <span data-i18n="oht.stat1.label">Products</span>
+                        </div>
+                        <div class="stat">
+                            <strong data-i18n="oht.stat2.val">EUR 2–15M</strong>
+                            <span data-i18n="oht.stat2.label">Seeking</span>
+                        </div>
+                        <div class="stat">
+                            <strong data-i18n="oht.stat3.val">EUR 8.4M</strong>
+                            <span data-i18n="oht.stat3.label">ARR Year 3</span>
+                        </div>
+                    </div>
+                    <a href="owlhoot.html" class="btn primary solution-btn" data-i18n="oht.btn">Learn About OHT</a>
+                </article>
+
             </div>
         </div>
     </section>
 
+    <!-- UNIFIED BENEFITS -->
     <section class="unified-benefits">
         <div class="container">
-            <h2>Unified Technology Platform</h2>
-            <p class="section-subtitle">Both solutions powered by the same patent-protected AR infrastructure</p>
+            <h2 data-i18n="ben.title">Unified Technology Platform</h2>
+            <p class="section-subtitle" data-i18n="ben.sub">Both solutions powered by the same patent-protected AR infrastructure</p>
             <div class="benefits-grid">
                 <article>
                     <div class="benefit-icon">🔒</div>
-                    <h3>Patent Protected</h3>
-                    <p>Core technology owned by Marif Bergan with international protection</p>
+                    <h3 data-i18n="ben.1.title">Patent Protected</h3>
+                    <p data-i18n="ben.1.desc">Core technology owned by Marif Bergan with international protection</p>
                 </article>
                 <article>
                     <div class="benefit-icon">🌐</div>
-                    <h3>Global Scale</h3>
-                    <p>ARCore & Spark AR compatible, ready for worldwide deployment</p>
+                    <h3 data-i18n="ben.2.title">Global Scale</h3>
+                    <p data-i18n="ben.2.desc">ARCore & Spark AR compatible, ready for worldwide deployment</p>
                 </article>
                 <article>
                     <div class="benefit-icon">⚡</div>
-                    <h3>Real-time Sync</h3>
-                    <p>BLE + AR fusion with offline-first architecture</p>
+                    <h3 data-i18n="ben.3.title">Real-time Sync</h3>
+                    <p data-i18n="ben.3.desc">BLE + AR fusion with offline-first architecture</p>
                 </article>
                 <article>
                     <div class="benefit-icon">🎯</div>
-                    <h3>Blue Ocean</h3>
-                    <p>No direct competitors in AR + BLE networking space</p>
+                    <h3 data-i18n="ben.4.title">Blue Ocean</h3>
+                    <p data-i18n="ben.4.desc">No direct competitors in AR + BLE networking space</p>
                 </article>
             </div>
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta" id="contact">
         <div class="container cta-content">
             <div>
-                <h2>Ready to transform your industry?</h2>
-                <p>Whether you're looking for digital networking or airport navigation, XCLABEL has the patent-backed solution.</p>
+                <h2 data-i18n="cta.idx.h2">Ready to transform your industry?</h2>
+                <p data-i18n="cta.idx.p">Whether you're looking for digital networking or airport navigation, XCLABEL has the patent-backed solution.</p>
             </div>
             <div>
                 <a class="btn primary" href="mailto:bergan.marif@xclabel.com">bergan.marif@xclabel.com</a>
-                <p class="cta-note">or call +373 687 61110</p>
+                <p class="cta-note" data-i18n="cta.note">or call +373 687 61110</p>
             </div>
         </div>
     </section>
@@ -194,53 +271,71 @@
 
 <footer class="footer">
     <div class="container footer-content">
-        <span>© <span id="year"></span> XCLABEL. Patent owned by Marif Bergan. Face recognition + BLE + Smart AR Technology.</span>
-        <a href="mailto:bergan.marif@xclabel.com">Contact</a>
+        <span data-i18n="footer.copy">© 2026 XCLABEL. Patent owned by Marif Bergan. Face recognition + BLE + Smart AR Technology.</span>
+        <a href="mailto:bergan.marif@xclabel.com" data-i18n="footer.contact">Contact</a>
     </div>
 </footer>
 
+<script src="lang.js"></script>
 <script>
     // HTTPS redirect
     if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
-    
-    
-    
-    // Debug: Log menu state
-    if (window.innerWidth <= 960) {
-        console.log('Mobile view detected');
-        console.log('Nav element:', nav);
-        console.log('Nav links count:', navLinks.length);
-        console.log('Nav toggle:', navToggle);
+
+    // Set current year in footer
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose  = document.getElementById('nav-close');
+    const mainNav   = document.getElementById('main-nav');
+
+    function openNav() {
+        document.body.classList.add('nav-open');
+        navToggle && navToggle.classList.add('open');
+        document.body.style.overflow = 'hidden';
     }
-    
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Prevent horizontal scroll on mobile
-    function preventHorizontalScroll() {
-        if (window.innerWidth <= 960) {
-            document.documentElement.style.overflowX = 'hidden';
-            document.body.style.overflowX = 'hidden';
-            document.documentElement.style.width = '100%';
-            document.body.style.width = '100%';
-            document.documentElement.style.maxWidth = '100vw';
-            document.body.style.maxWidth = '100vw';
+    function closeNav() {
+        document.body.classList.remove('nav-open');
+        navToggle && navToggle.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    navToggle && navToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.body.classList.contains('nav-open') ? closeNav() : openNav();
+    });
+
+    navClose && navClose.addEventListener('click', closeNav);
+
+    // Close nav on link click
+    mainNav && mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) closeNav();
+        });
+    });
+
+    // Close on overlay click (click outside nav)
+    document.addEventListener('click', function(e) {
+        if (document.body.classList.contains('nav-open') && mainNav && !mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+            closeNav();
         }
+    });
+
+    // Prevent horizontal scroll
+    function preventHorizontalScroll() {
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
     }
-    
     preventHorizontalScroll();
     window.addEventListener('resize', preventHorizontalScroll);
-    window.addEventListener('orientationchange', preventHorizontalScroll);
-    
+
     // Mobile video optimization
-    if (window.innerWidth <= 640) {
-        const video = document.querySelector('.hero-video');
-        if (video) {
-            video.setAttribute('playsinline', '');
-            video.setAttribute('webkit-playsinline', '');
-        }
+    const video = document.querySelector('.hero-video');
+    if (video) {
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
     }
 </script>
 </body>
