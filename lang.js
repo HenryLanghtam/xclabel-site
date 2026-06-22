@@ -32,7 +32,7 @@ const TRANSLATIONS = {
 
     // Index OHT card
     'oht.subtitle':   'Enterprise Software Studio — 10 Products',
-    'oht.desc':       'The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software across ERP, BI, RPA, logistics, crypto, and communication — targeting EUR 400B+ in combined addressable markets.',
+    'oht.desc':       'The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software across ERP, BI, RPA, logistics, accessibility, and AR — targeting EUR 400B+ in combined addressable markets.',
     'oht.btn':        'Learn About OHT',
     'oht.stat1.val':  '10+',
     'oht.stat1.label':'Products',
@@ -56,11 +56,33 @@ const TRANSLATIONS = {
     // CTA shared
     'cta.idx.h2':     'Ready to transform your industry?',
     'cta.idx.p':      'Whether you\'re looking for digital networking or airport navigation, XCLABEL has the patent-backed solution.',
-    'cta.note':       'or call +373 687 61110',
+    'cta.note':       'or call +373 68 761 110',
 
     // Footer
     'footer.copy':    '© {year} XCLABEL. Patent owned by Marif Bergan. Face recognition + BLE + Smart AR Technology.',
     'footer.contact': 'Contact',
+
+    // ── OHT Product cards ─────────────────────────────────────────
+    'oht.prod.xc.tag':      'AR · Networking',
+    'oht.prod.xc.desc':     'Patent-protected face recognition + BLE = automatic digital business cards in 0.3 s. Smart AR billboards anchored to real-world surfaces that can\'t be blocked by ad blockers. For enterprises, live events, retail, and dating apps.',
+    'oht.prod.ap.tag':      'AR · Aviation',
+    'oht.prod.ap.desc':     'Real-time AR navigation and contactless passenger verification for airports. BLE beacon tracking, face recognition security checkpoints (0.3 s per passenger), flight ticket integration, and multi-floor wayfinding. 40% faster boarding.',
+    'oht.prod.perch.tag':   'ERP · SME',
+    'oht.prod.perch.desc':  'Lightweight on-premise ERP for SMEs — simpler than 1C, cheaper than SAP. Modules: Finance (double-entry, TVA), Inventory (FIFO), CRM, Sales, Procurement, HR with Moldova payroll (CAS/CASS). Built-in 1C XML importer, FastAPI REST, Docker-ready Studio UI.',
+    'oht.prod.strix.tag':   'BI · Analytics',
+    'oht.prod.strix.desc':  'Self-service BI platform that connects to SQL databases, Excel files, Perch ERP, and Glide RPA. Drag-and-drop dashboards, scheduled PDF reports, metric-based alert rules. On-premise, no cloud lock-in, no AI black boxes.',
+    'oht.prod.glide.tag':   'RPA · Automation',
+    'oht.prod.glide.desc':  'Python-native RPA platform — faster to set up than UiPath, zero licensing fees. Define workflows in YAML, automate browsers with Playwright, orchestrate REST APIs, run jobs concurrently via asyncio. MIT open core, Docker-ready, live Studio web dashboard.',
+    'oht.prod.hollow.tag':  'WMS · Logistics',
+    'oht.prod.hollow.desc': 'Virtual warehouse management system. Configurable 3D grid layout (rows × columns × levels), color-coded zone management, stock entries per shelf position, and a full FastAPI REST backend with a real-time Studio dashboard for inventory control.',
+    'oht.prod.telepat.tag': 'Accessibility · Gaze',
+    'oht.prod.telepat.desc':'Hands-free phone control via real-time eye-tracking. The front camera and TensorFlow Lite model continuously track gaze position — dwell on any element to tap it. Smile-to-click, calibration activity, PRECISION preset, and smooth animated gaze overlay. Designed for motor-impaired users and hands-free workflows.',
+    'oht.prod.xproj.tag':   'AR · Wireless Display',
+    'oht.prod.xproj.desc':  'AR surface projector + wireless screen mirror in one app. AR mode uses ARCore/Sceneform to anchor content onto real-world surfaces. Wireless mode captures the screen and streams it at up to 60 fps H.264 (12 Mbps) to nearby devices via Google Nearby Connections — no cables, no router needed.',
+    'oht.prod.xcdock.tag':  'Bluetooth · Hub',
+    'oht.prod.xcdock.desc': 'Turns any Android phone into a virtual Bluetooth dock station. Simultaneously scans and manages headphones, speakers, TVs, computers, and tablets over BT Classic, BLE, and Wi-Fi Direct. Real-time RSSI signal bars, device type detection, and a VirtualHub engine that routes source-to-receiver connections.',
+    'oht.prod.icswigl.tag': 'Accessibility · Display',
+    'oht.prod.icswigl.desc':'System-wide font and display scaling for Android, controlled by voice. Say "Hey Wigl set 3" to change text size instantly, or "Wigl Wigl" to trigger an emergency flashlight. Includes TV mode for external screens, standalone web reader with custom zoom, and flash notifications. Supports Russian, Romanian, and English.',
 
     // xclabel.html
     'xch1':           'XCLABEL — Revolutionary AR-Powered Digital Networking',
@@ -74,7 +96,7 @@ const TRANSLATIONS = {
     'xc.card.p':      'Transparent AR overlay with verified identity, real-time analytics, and dynamic creative.',
     'xc.demo.eyebrow':'Live product preview',
     'xc.demo.h2':     'Instant face-to-face overlays that close the loop in seconds.',
-    'xc.demo.p':      'XCLABEL locks onto the face, pulls verified reach, and delivers actionable buttons that work even when the venue is offline. This is the experience prospects remember — and the one that converts.',
+    'xc.demo.p':      'XCLABEL locks onto the face, pulls verified reach, and delivers actionable buttons that work even when the venue is offline.',
     'xc.demo.li1':    '<strong>Trust-first identity:</strong> relationship status plus certified audience metrics at a glance.',
     'xc.demo.li2':    '<strong>Monetizable engagement:</strong> "Open" drives any destination, "Copy" pushes the link to any channel.',
     'xc.demo.li3':    '<strong>Offline-to-online bridge:</strong> patented BLE sync replaces QR scans and NFC taps.',
@@ -169,7 +191,7 @@ const TRANSLATIONS = {
     // owlhoot.html
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Building Tomorrow\'s Enterprise Software — Today.',
-    'oht.h1.p':       'A European deep-tech studio with 10 specialised enterprise software products across AR, logistics, ERP, BI, RPA, crypto, and communication. Targeting EUR 400B+ in combined addressable markets.',
+    'oht.h1.p':       'A European deep-tech studio founded in 2026 with 10 specialised enterprise software products across AR, logistics, ERP, BI, RPA, and accessibility. Targeting EUR 400B+ in combined addressable markets.',
     'oht.h1.btn1':    'Investor Information',
     'oht.h1.btn2':    'Become a Partner',
     'oht.mission.h2': 'Our Mission',
@@ -216,7 +238,7 @@ const TRANSLATIONS = {
     'oht.partner.btn': 'Contact Us to Partner',
     'oht.cta.h2':     'Ready to build something extraordinary?',
     'oht.cta.p':      'Whether you are an investor, partner, or enterprise customer — we would love to hear from you.',
-    'oht.footer':     '© {year} Owl Hoot Tech. All rights reserved.',
+    'oht.footer':     '© {year} Owl Hoot Tech. Founded 2026. All rights reserved.',
   },
 
   ru: {
@@ -244,7 +266,7 @@ const TRANSLATIONS = {
     'ap.stat3.label': 'AR-навигация',
 
     'oht.subtitle':   'Студия корпоративного ПО — 10 продуктов',
-    'oht.desc':       'Компания, создавшая XCLABEL. Owl Hoot Tech разрабатывает специализированное корпоративное программное обеспечение в области ERP, BI, RPA, логистики, крипто и коммуникаций.',
+    'oht.desc':       'Компания, создавшая XCLABEL. Owl Hoot Tech разрабатывает специализированное корпоративное ПО в области ERP, BI, RPA, логистики, доступности и AR.',
     'oht.btn':        'Узнать об OHT',
     'oht.stat1.val':  '10+',
     'oht.stat1.label':'Продуктов',
@@ -266,10 +288,32 @@ const TRANSLATIONS = {
 
     'cta.idx.h2':     'Готовы трансформировать свою отрасль?',
     'cta.idx.p':      'Будь то цифровые коммуникации или навигация в аэропорту — у XCLABEL есть запатентованное решение.',
-    'cta.note':       'или позвоните +373 687 61110',
+    'cta.note':       'или позвоните +373 68 761 110',
 
     'footer.copy':    '© {year} XCLABEL. Патент принадлежит Марифу Бергану. Распознавание лиц + BLE + Smart AR.',
     'footer.contact': 'Контакт',
+
+    // ── OHT Product cards ─────────────────────────────────────────
+    'oht.prod.xc.tag':      'AR · Коммуникации',
+    'oht.prod.xc.desc':     'Запатентованное распознавание лиц + BLE = автоматические цифровые визитки за 0,3 с. Умные AR-билборды, закреплённые на реальных поверхностях, которые невозможно заблокировать блокировщиками рекламы. Для предприятий, мероприятий, ритейла и приложений знакомств.',
+    'oht.prod.ap.tag':      'AR · Авиация',
+    'oht.prod.ap.desc':     'AR-навигация в реальном времени и бесконтактная верификация пассажиров для аэропортов. BLE-маяки, распознавание лиц на КПП (0,3 с на пассажира), интеграция с билетами и многоэтажная навигация. Посадка на 40% быстрее.',
+    'oht.prod.perch.tag':   'ERP · МСБ',
+    'oht.prod.perch.desc':  'Лёгкая локальная ERP для малого и среднего бизнеса — проще, чем 1С, дешевле, чем SAP. Модули: Финансы (двойная запись, НДС), Склад (ФИФО), CRM, Продажи, Закупки, HR с расчётом зарплаты Молдовы (CAS/CASS). Импорт XML 1С, FastAPI REST, Docker-ready Studio.',
+    'oht.prod.strix.tag':   'BI · Аналитика',
+    'oht.prod.strix.desc':  'Self-service BI-платформа, подключающаяся к SQL-базам, Excel, Perch ERP и Glide RPA. Конструктор дашбордов drag-and-drop, запланированные PDF-отчёты, правила оповещений по метрикам. Локальное развёртывание, без облачной зависимости.',
+    'oht.prod.glide.tag':   'RPA · Автоматизация',
+    'oht.prod.glide.desc':  'Python-нативная RPA-платформа — быстрее UiPath, нулевые лицензионные сборы. Определяйте рабочие процессы в YAML, автоматизируйте браузеры через Playwright, оркеструйте REST API, запускайте задания параллельно через asyncio. MIT open core, Docker-ready.',
+    'oht.prod.hollow.tag':  'WMS · Логистика',
+    'oht.prod.hollow.desc': 'Виртуальная система управления складом. Настраиваемая 3D-сетка (ряды × столбцы × уровни), управление зонами с цветовой кодировкой, записи запасов на позицию и FastAPI REST бэкенд с дашбордом Studio в реальном времени.',
+    'oht.prod.telepat.tag': 'Доступность · Взгляд',
+    'oht.prod.telepat.desc':'Управление телефоном руками-free через отслеживание взгляда в реальном времени. Фронтальная камера и модель TensorFlow Lite отслеживают позицию взгляда — задержитесь на элементе чтобы нажать. Клик по улыбке, калибровка, пресет PRECISION.',
+    'oht.prod.xproj.tag':   'AR · Беспроводной дисплей',
+    'oht.prod.xproj.desc':  'AR-проектор поверхностей + беспроводное зеркало экрана в одном приложении. AR-режим использует ARCore/Sceneform. Беспроводной режим транслирует экран до 60 fps H.264 (12 Mbps) через Google Nearby Connections — без кабелей и роутера.',
+    'oht.prod.xcdock.tag':  'Bluetooth · Хаб',
+    'oht.prod.xcdock.desc': 'Превращает любой Android в виртуальный Bluetooth-хаб. Одновременно сканирует наушники, колонки, телевизоры, компьютеры через BT Classic, BLE и Wi-Fi Direct. Бары RSSI в реальном времени, определение типа устройства, движок VirtualHub.',
+    'oht.prod.icswigl.tag': 'Доступность · Дисплей',
+    'oht.prod.icswigl.desc':'Системное масштабирование шрифта и дисплея Android, управляемое голосом. Скажите "Hey Wigl set 3" для мгновенного изменения размера текста, или "Wigl Wigl" для экстренного фонарика. TV-режим, автономный веб-ридер, флэш-уведомления.',
 
     'xch1':           'XCLABEL — Революционные AR-коммуникации',
     'xch1.p':         'Технология мирового первенства: автоматическое распознавание лиц + BLE = мгновенные цифровые визитки + умные AR-билборды, которые невозможно заблокировать.',
@@ -303,7 +347,7 @@ const TRANSLATIONS = {
     'xc.tech.h2':     'Две революционные технологии в одном',
     'xc.tech.p':      'Запатентованный рабочий процесс XCLABEL, объединяющий компьютерное зрение, BLE и AR.',
     'xc.tech.s1.h3':  'Мгновенные цифровые ID',
-    'xc.tech.s1.p':   'Автоматическое распознавание лиц за 0.3 секунды + BLE-хэндшейк без сканирования.',
+    'xc.tech.s1.p':   'Автоматическое распознавание лиц за 0,3 секунды + BLE-хэндшейк без сканирования.',
     'xc.tech.s2.h3':  'Синхронизация данных в реальном времени',
     'xc.tech.s2.p':   'Дальность 10 метров обновляет Google Контакты и Meta Business Suite в реальном времени.',
     'xc.tech.s3.h3':  'Умные AR-билборды',
@@ -375,7 +419,7 @@ const TRANSLATIONS = {
 
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Создаём корпоративное ПО будущего — сегодня.',
-    'oht.h1.p':       'Европейская deep-tech студия с 10 специализированными корпоративными продуктами в области AR, логистики, ERP, BI, RPA, крипто и коммуникаций. Целевой рынок — более EUR 400B+ в совокупности.',
+    'oht.h1.p':       'Европейская deep-tech студия, основанная в 2026 году, с 10 специализированными продуктами в области AR, логистики, ERP, BI, RPA и доступности. Целевой рынок — более EUR 400B+ в совокупности.',
     'oht.h1.btn1':    'Информация для инвесторов',
     'oht.h1.btn2':    'Стать партнёром',
     'oht.mission.h2': 'Наша миссия',
@@ -385,7 +429,7 @@ const TRANSLATIONS = {
     'oht.products.h2':'Наши 10 продуктов',
     'oht.products.sub':'Каждый продукт — лучший инструмент для своей задачи: глубокая специализация, облачная архитектура, корпоративные стандарты.',
     'oht.inv.h2':     'Для инвесторов',
-    'oht.inv.sub':    'Редкая возможность: 10 корпоративных продуктов, совокупный TAM EUR 400B+, привлекаем EUR 2–15M seed-инвестиций.',
+    'oht.inv.sub':    'Редкая возможность: 10 корпоративных продуктов, совокупный TAM EUR 400B+, привлекаем EUR 2–15M.',
     'oht.inv.ask.h3': 'Инвестиционный запрос',
     'oht.inv.round':  'Тип раунда',
     'oht.inv.round.v':'Seed / Pre-Series A',
@@ -422,7 +466,7 @@ const TRANSLATIONS = {
     'oht.partner.btn': 'Связаться для партнёрства',
     'oht.cta.h2':     'Готовы создать что-то выдающееся?',
     'oht.cta.p':      'Будь вы инвестор, партнёр или корпоративный клиент — мы рады пообщаться.',
-    'oht.footer':     '© {year} Owl Hoot Tech. Все права защищены.',
+    'oht.footer':     '© {year} Owl Hoot Tech. Основана в 2026. Все права защищены.',
   },
 
   ro: {
@@ -450,7 +494,7 @@ const TRANSLATIONS = {
     'ap.stat3.label': 'Navigare AR',
 
     'oht.subtitle':   'Studio Software Enterprise — 10 Produse',
-    'oht.desc':       'Compania din spatele XCLABEL. Owl Hoot Tech construiește software enterprise specializat în domenii precum ERP, BI, RPA, logistică, crypto și comunicații.',
+    'oht.desc':       'Compania din spatele XCLABEL. Owl Hoot Tech construiește software enterprise specializat în ERP, BI, RPA, logistică, accesibilitate și AR — vizând EUR 400B+ în piețe adresabile combinate.',
     'oht.btn':        'Află despre OHT',
     'oht.stat1.val':  '10+',
     'oht.stat1.label':'Produse',
@@ -472,10 +516,32 @@ const TRANSLATIONS = {
 
     'cta.idx.h2':     'Gata să transformați industria dvs.?',
     'cta.idx.p':      'Indiferent dacă căutați networking digital sau navigație aeroportuară, XCLABEL are soluția brevetată.',
-    'cta.note':       'sau sunați la +373 687 61110',
+    'cta.note':       'sau sunați la +373 68 761 110',
 
     'footer.copy':    '© {year} XCLABEL. Brevet deținut de Marif Bergan. Recunoaștere facială + BLE + Smart AR.',
     'footer.contact': 'Contact',
+
+    // ── OHT Product cards ─────────────────────────────────────────
+    'oht.prod.xc.tag':      'AR · Networking',
+    'oht.prod.xc.desc':     'Recunoaștere facială brevetată + BLE = cărți de vizită digitale automate în 0,3 s. Panouri AR inteligente ancorate pe suprafețe reale care nu pot fi blocate de ad-blockere. Pentru întreprinderi, evenimente live, retail și aplicații de dating.',
+    'oht.prod.ap.tag':      'AR · Aviație',
+    'oht.prod.ap.desc':     'Navigare AR în timp real și verificare fără contact a pasagerilor pentru aeroporturi. Balise BLE, puncte de control cu recunoaștere facială (0,3 s/pasager), integrare bilete și navigare multi-etaj. Îmbarcare cu 40% mai rapidă.',
+    'oht.prod.perch.tag':   'ERP · IMM',
+    'oht.prod.perch.desc':  'ERP on-premise ușor pentru IMM-uri — mai simplu decât 1C, mai ieftin decât SAP. Module: Finanțe (partidă dublă, TVA), Stocuri (FIFO), CRM, Vânzări, Achiziții, HR cu salarizare Moldova (CAS/CASS). Import XML 1C, FastAPI REST, Studio Docker-ready.',
+    'oht.prod.strix.tag':   'BI · Analiză',
+    'oht.prod.strix.desc':  'Platformă BI self-service care se conectează la baze de date SQL, Excel, Perch ERP și Glide RPA. Constructor de dashboarduri drag-and-drop, rapoarte PDF programate, reguli de alertă bazate pe metrici. On-premise, fără dependență cloud.',
+    'oht.prod.glide.tag':   'RPA · Automatizare',
+    'oht.prod.glide.desc':  'Platformă RPA Python-nativă — mai rapidă decât UiPath, zero taxe de licențiere. Definiți fluxuri în YAML, automatizați browsere cu Playwright, orchestrați REST API, rulați joburi concurent via asyncio. MIT open core, Docker-ready.',
+    'oht.prod.hollow.tag':  'WMS · Logistică',
+    'oht.prod.hollow.desc': 'Sistem virtual de management al depozitelor. Grilă 3D configurabilă (rânduri × coloane × niveluri), management zone cu coduri de culori, intrări stoc per poziție și backend FastAPI REST cu dashboard Studio în timp real.',
+    'oht.prod.telepat.tag': 'Accesibilitate · Privire',
+    'oht.prod.telepat.desc':'Control telefon hands-free prin urmărirea privirii în timp real. Camera frontală și modelul TensorFlow Lite urmăresc continuu poziția privirii — rămâneți pe un element pentru a-l tasta. Click prin zâmbet, calibrare, preset PRECISION.',
+    'oht.prod.xproj.tag':   'AR · Afișaj Wireless',
+    'oht.prod.xproj.desc':  'Proiector AR de suprafețe + oglindă ecran wireless într-o singură aplicație. Modul AR folosește ARCore/Sceneform. Modul wireless transmite ecranul la până la 60 fps H.264 (12 Mbps) prin Google Nearby Connections — fără cabluri sau router.',
+    'oht.prod.xcdock.tag':  'Bluetooth · Hub',
+    'oht.prod.xcdock.desc': 'Transformă orice telefon Android într-un hub Bluetooth virtual. Scanează și gestionează simultan căști, boxe, televizoare, computere prin BT Classic, BLE și Wi-Fi Direct. Bare RSSI în timp real, detectare tip dispozitiv, motor VirtualHub.',
+    'oht.prod.icswigl.tag': 'Accesibilitate · Afișaj',
+    'oht.prod.icswigl.desc':'Scalare font și afișaj la nivel de sistem Android, controlată prin voce. Spuneți "Hey Wigl set 3" pentru a schimba instant dimensiunea textului, sau "Wigl Wigl" pentru lanternă de urgență. Mod TV, cititor web autonom cu zoom personalizat.',
 
     'xch1':           'XCLABEL — Networking Digital AR Revoluționar',
     'xch1.p':         'Tehnologie premieră mondială: recunoaștere facială automată + BLE = cărți de vizită digitale instantanee + panouri AR inteligente care nu pot fi blocate.',
@@ -509,7 +575,7 @@ const TRANSLATIONS = {
     'xc.tech.h2':     'Două tehnologii revoluționare într-una',
     'xc.tech.p':      'Fluxul de lucru brevetat XCLABEL care combină viziunea computerizată, BLE și media AR spațial.',
     'xc.tech.s1.h3':  'ID-uri Digitale Instantanee',
-    'xc.tech.s1.p':   'Recunoaștere facială automată în 0.3 secunde + handshake BLE fără scanare.',
+    'xc.tech.s1.p':   'Recunoaștere facială automată în 0,3 secunde + handshake BLE fără scanare.',
     'xc.tech.s2.h3':  'Sincronizare Date în Timp Real',
     'xc.tech.s2.p':   'Raza de 10 metri actualizează Google Contacts și Meta Business Suite în timp real.',
     'xc.tech.s3.h3':  'Panouri AR Inteligente',
@@ -581,7 +647,7 @@ const TRANSLATIONS = {
 
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Construim Software Enterprise al Viitorului — Astăzi.',
-    'oht.h1.p':       'Studio deep-tech european cu 10 produse software enterprise specializate în AR, logistică, ERP, BI, RPA, crypto și comunicații. Piață adresabilă combinată de peste EUR 400B+.',
+    'oht.h1.p':       'Studio deep-tech european fondat în 2026, cu 10 produse software enterprise specializate în AR, logistică, ERP, BI, RPA și accesibilitate. Piață adresabilă combinată de peste EUR 400B+.',
     'oht.h1.btn1':    'Informații pentru Investitori',
     'oht.h1.btn2':    'Deveniți Partener',
     'oht.mission.h2': 'Misiunea Noastră',
@@ -628,7 +694,7 @@ const TRANSLATIONS = {
     'oht.partner.btn': 'Contactați-ne pentru Parteneriat',
     'oht.cta.h2':     'Gata să construiți ceva extraordinar?',
     'oht.cta.p':      'Indiferent că sunteți investitor, partener sau client enterprise — ne-ar face plăcere să discutăm.',
-    'oht.footer':     '© {year} Owl Hoot Tech. Toate drepturile rezervate.',
+    'oht.footer':     '© {year} Owl Hoot Tech. Fondată în 2026. Toate drepturile rezervate.',
   }
 };
 
@@ -637,36 +703,27 @@ function setLang(lang) {
   if (!TRANSLATIONS[lang]) return;
   const t = TRANSLATIONS[lang];
 
-  // Apply data-i18n attributes
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) {
-      el.innerHTML = t[key];
-    }
+    if (t[key] !== undefined) el.innerHTML = t[key];
   });
 
-  // Apply data-i18n-placeholder attributes
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
   });
 
-  // Handle {year} in footer
   document.querySelectorAll('[data-i18n]').forEach(el => {
     if (el.innerHTML.includes('{year}')) {
       el.innerHTML = el.innerHTML.replace('{year}', new Date().getFullYear());
     }
   });
 
-  // Update active lang button state
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 
-  // Update html lang attribute
   document.documentElement.lang = lang;
-
-  // Persist selection
   try { localStorage.setItem('xclabel_lang', lang); } catch(e) {}
 }
 
