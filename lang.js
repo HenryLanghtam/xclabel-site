@@ -202,7 +202,7 @@ const TRANSLATIONS = {
     // owlhoot.html
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Building Tomorrow\'s Enterprise Software — Today.',
-    'oht.h1.p':       'A European deep-tech studio founded in 2026 with 10 specialised enterprise software products across AR, logistics, ERP, BI, RPA, and accessibility. Targeting EUR 400B+ in combined addressable markets.',
+    'oht.h1.p':       'A European deep-tech studio founded in 2026 with 11 specialised enterprise software products across AR, smart parking, logistics, ERP, BI, RPA, and accessibility. Targeting EUR 400B+ in combined addressable markets.',
     'oht.h1.btn1':    'Investor Information',
     'oht.h1.btn2':    'Become a Partner',
     'oht.mission.h2': 'Our Mission',
@@ -441,7 +441,7 @@ const TRANSLATIONS = {
 
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Создаём корпоративное ПО будущего — сегодня.',
-    'oht.h1.p':       'Европейская deep-tech студия, основанная в 2026 году, с 10 специализированными продуктами в области AR, логистики, ERP, BI, RPA и доступности. Целевой рынок — более EUR 400B+ в совокупности.',
+    'oht.h1.p':       'Европейская deep-tech студия, основанная в 2026 году, с 11 специализированными продуктами в области AR, умных парковок, логистики, ERP, BI, RPA и доступности. Целевой рынок — более EUR 400B+ в совокупности.',
     'oht.h1.btn1':    'Информация для инвесторов',
     'oht.h1.btn2':    'Стать партнёром',
     'oht.mission.h2': 'Наша миссия',
