@@ -34,7 +34,7 @@ const TRANSLATIONS = {
     'oht.subtitle':   'Enterprise Software Studio — 11 Products',
     'oht.desc':       'The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software across ERP, BI, RPA, logistics, accessibility, and AR — targeting EUR 400B+ in combined addressable markets.',
     'oht.btn':        'Learn About OHT',
-    'oht.stat1.val':  '10+',
+    'oht.stat1.val':  '11+',
     'oht.stat1.label':'Products',
     'oht.stat2.val':  'EUR 2–15M',
     'oht.stat2.label':'Seeking',
@@ -279,7 +279,7 @@ const TRANSLATIONS = {
     'oht.subtitle':   'Студия корпоративного ПО — 11 продуктов',
     'oht.desc':       'Компания, создавшая XCLABEL. Owl Hoot Tech разрабатывает специализированное корпоративное ПО в области ERP, BI, RPA, логистики, доступности и AR.',
     'oht.btn':        'Узнать об OHT',
-    'oht.stat1.val':  '10+',
+    'oht.stat1.val':  '11+',
     'oht.stat1.label':'Продуктов',
     'oht.stat2.val':  'EUR 2–15М',
     'oht.stat2.label':'Привлекаем',
@@ -518,7 +518,7 @@ const TRANSLATIONS = {
     'oht.subtitle':   'Studio Software Enterprise — 11 Produse',
     'oht.desc':       'Compania din spatele XCLABEL. Owl Hoot Tech construiește software enterprise specializat în ERP, BI, RPA, logistică, accesibilitate și AR — vizând EUR 400B+ în piețe adresabile combinate.',
     'oht.btn':        'Află despre OHT',
-    'oht.stat1.val':  '10+',
+    'oht.stat1.val':  '11+',
     'oht.stat1.label':'Produse',
     'oht.stat2.val':  'EUR 2–15M',
     'oht.stat2.label':'Căutăm',
@@ -724,46 +724,36 @@ const TRANSLATIONS = {
     'oht.partner.2.p':'Conectați platforma dvs. la produsele OHT prin API-uri deschise. Extindeți oferta cu instrumente specializate de top.',
     'oht.partner.3.h3':'Investiție Strategică',
     'oht.partner.3.p':'Co-investiți și obțineți o poziție de capital. Acces la date financiare complete, drepturi de observator în consiliu.',
-    'oht.partner.btn': 'Contactați-ne pentru Parteneriat',
-    'oht.cta.h2':     'Gata să construiți ceva extraordinar?',
-    'oht.cta.p':      'Indiferent că sunteți investitor, partener sau client enterprise — ne-ar face plăcere să discutăm.',
+    'oht.partner.btn':     'oht.partner.btn': 'Contactați-ne pentru Parteneriat',
+    'oht.cta.h2':     'Gata să construim ceva extraordinar?',
+    'oht.cta.p':      'Fie că ești investitor, partener sau client enterprise — ne-ar face plăcere să discutăm.',
     'oht.footer':     '© {year} Owl Hoot Tech. Fondată în 2026. Toate drepturile rezervate.',
-  }
+    'cta.note':       'sau sunați +373 68 761 110',
+    'footer.copy':    '© {year} XCLABEL. Brevet deținut de Marif Bergan. Recunoaștere facială + BLE + AR Smart.',
+    'footer.contact': 'Contact',
+  },
 };
 
-// ── Core translation engine ───────────────────────────────────────────────────
+// ─── Language engine ────────────────────────────────────────────────────────
 function setLang(lang) {
-  if (!TRANSLATIONS[lang]) return;
-  const t = TRANSLATIONS[lang];
-
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.innerHTML = t[key];
+    if (t[key] === undefined) return;
+    const val = t[key].replace('{year}', new Date().getFullYear());
+    el.textContent = val;
   });
-
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
-  });
-
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (el.innerHTML.includes('{year}')) {
-      el.innerHTML = el.innerHTML.replace('{year}', new Date().getFullYear());
-    }
-  });
-
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-
+  try { localStorage.setItem('oht_lang', lang); } catch(e) {}
   document.documentElement.lang = lang;
-  try { localStorage.setItem('xclabel_lang', lang); } catch(e) {}
 }
 
-// ── Init on DOM ready ─────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  let lang = 'en';
-  try { lang = localStorage.getItem('xclabel_lang') || 'en'; } catch(e) {}
-  if (!TRANSLATIONS[lang]) lang = 'en';
-  setLang(lang);
-});
+// Apply on load
+(function() {
+  let saved = 'en';
+  try { saved = localStorage.getItem('oht_lang') || navigator.language?.slice(0,2) || 'en'; } catch(e) {}
+  if (!TRANSLATIONS[saved]) saved = 'en';
+  setLang(saved);
+})();

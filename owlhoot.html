@@ -85,8 +85,8 @@
             <!-- Stats bar -->
             <div class="oht-stats-bar">
                 <div class="oht-stat-item">
-                    <strong>10</strong>
-                    <span>Products</span>
+                    <strong>11</strong>
+                    <span data-i18n="oht.stat1.label">Products</span>
                 </div>
                 <div class="oht-stat-item">
                     <strong>EUR 400B+</strong>
@@ -256,7 +256,7 @@
                     <div class="inv-table">
                         <div class="inv-row">
                             <span class="inv-key" data-i18n="oht.inv.m1">Products in portfolio</span>
-                            <span class="inv-val" data-i18n="oht.inv.m1.v">10 enterprise software products</span>
+                            <span class="inv-val" data-i18n="oht.inv.m1.v">11 enterprise software products</span>
                         </div>
                         <div class="inv-row">
                             <span class="inv-key" data-i18n="oht.inv.m2">Combined TAM</span>
@@ -378,7 +378,9 @@
 
     navToggle.addEventListener('click', () => mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav());
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
-    document.addEventListener('click', e => { if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !navToggle.contains(e.target)) closeMobileNav(); });
+    document.addEventListener('click', e => {
+        if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !navToggle.contains(e.target)) closeMobileNav();
+    });
 
     document.documentElement.style.overflowX = 'hidden';
 </script>
