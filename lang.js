@@ -724,7 +724,7 @@ const TRANSLATIONS = {
     'oht.partner.2.p':'Conectați platforma dvs. la produsele OHT prin API-uri deschise. Extindeți oferta cu instrumente specializate de top.',
     'oht.partner.3.h3':'Investiție Strategică',
     'oht.partner.3.p':'Co-investiți și obțineți o poziție de capital. Acces la date financiare complete, drepturi de observator în consiliu.',
-    'oht.partner.btn':     'oht.partner.btn': 'Contactați-ne pentru Parteneriat',
+    'oht.partner.btn':  'Contactați-ne pentru Parteneriat',
     'oht.cta.h2':     'Gata să construim ceva extraordinar?',
     'oht.cta.p':      'Fie că ești investitor, partener sau client enterprise — ne-ar face plăcere să discutăm.',
     'oht.footer':     '© {year} Owl Hoot Tech. Fondată în 2026. Toate drepturile rezervate.',
