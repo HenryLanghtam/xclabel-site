@@ -1236,6 +1236,38 @@ main { padding-top: 64px; }
 .oht-product-card h3 { font-size: 1.1rem; font-weight: var(--fw-sem); margin-bottom: 0.4rem; }
 .oht-product-card p  { color: var(--col-text-muted); font-size: 0.88rem; line-height: 1.65; margin: 0; }
 
+/* Featured / New product card */
+.oht-product-card--featured {
+  border-color: rgba(37,99,235,0.45);
+  background: linear-gradient(135deg, var(--col-bg-card) 80%, rgba(37,99,235,0.06) 100%);
+}
+.oht-product-card--featured::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+}
+.oht-product-card--featured:hover {
+  border-color: rgba(37,99,235,0.65);
+  box-shadow: 0 8px 32px rgba(37,99,235,0.22);
+}
+.prod-new-badge {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
 /* Investors */
 .oht-investors {
   padding: 5.5rem 0;
