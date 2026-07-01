@@ -32,7 +32,7 @@ const TRANSLATIONS = {
 
     // Index OHT card
     'oht.subtitle':   'Enterprise Software Studio — 11 Products',
-    'oht.desc':       'The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software across ERP, BI, RPA, logistics, accessibility, and AR — targeting EUR 400B+ in combined addressable markets.',
+    'oht.desc':       'The company behind XCLABEL. Owl Hoot Tech builds specialised enterprise software across ERP, BI, RPA, logistics, accessibility, and AR — targeting USD 160B+ in combined addressable markets.',
     'oht.btn':        'Learn About OHT',
     'oht.stat1.val':  '11+',
     'oht.stat1.label':'Products',
@@ -202,7 +202,7 @@ const TRANSLATIONS = {
     // owlhoot.html
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Building Tomorrow\'s Enterprise Software — Today.',
-    'oht.h1.p':       'A European deep-tech studio founded in 2026 with 11 specialised enterprise software products across AR, smart parking, logistics, ERP, BI, RPA, and accessibility. Targeting EUR 400B+ in combined addressable markets.',
+    'oht.h1.p':       'A European deep-tech studio founded in 2026 with 11 specialised enterprise software products across AR, smart parking, logistics, ERP, BI, RPA, and accessibility. Targeting USD 160B+ in combined addressable markets.',
     'oht.h1.btn1':    'Investor Information',
     'oht.h1.btn2':    'Become a Partner',
     'oht.mission.h2': 'Our Mission',
@@ -212,7 +212,7 @@ const TRANSLATIONS = {
     'oht.products.h2':'Our 11 Products',
     'oht.products.sub':'Each product is the best tool for its specific job — deeply specialised, cloud-native, and built to enterprise standards.',
     'oht.inv.h2':     'For Investors',
-    'oht.inv.sub':    'A rare opportunity: 11 enterprise software products, EUR 400B+ combined TAM, seeking EUR 2–15M seed funding.',
+    'oht.inv.sub':    'A rare opportunity: 11 enterprise software products, USD 160B+ combined TAM, seeking EUR 2–15M seed funding.',
     'oht.inv.ask.h3': 'Investment Ask',
     'oht.inv.round':  'Round Type',
     'oht.inv.round.v':'Seed / Pre-Series A',
@@ -441,7 +441,7 @@ const TRANSLATIONS = {
 
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Создаём корпоративное ПО будущего — сегодня.',
-    'oht.h1.p':       'Европейская deep-tech студия, основанная в 2026 году, с 11 специализированными продуктами в области AR, умных парковок, логистики, ERP, BI, RPA и доступности. Целевой рынок — более EUR 400B+ в совокупности.',
+    'oht.h1.p':       'Европейская deep-tech студия, основанная в 2026 году, с 11 специализированными продуктами в области AR, умных парковок, логистики, ERP, BI, RPA и доступности. Целевой рынок — более USD 160B+ в совокупности.',
     'oht.h1.btn1':    'Информация для инвесторов',
     'oht.h1.btn2':    'Стать партнёром',
     'oht.mission.h2': 'Наша миссия',
@@ -451,7 +451,7 @@ const TRANSLATIONS = {
     'oht.products.h2':'Наши 11 продуктов',
     'oht.products.sub':'Каждый продукт — лучший инструмент для своей задачи: глубокая специализация, облачная архитектура, корпоративные стандарты.',
     'oht.inv.h2':     'Для инвесторов',
-    'oht.inv.sub':    'Редкая возможность: 11 корпоративных продуктов, совокупный TAM EUR 400B+, привлекаем EUR 2–15M.',
+    'oht.inv.sub':    'Редкая возможность: 11 корпоративных продуктов, совокупный TAM USD 160B+, привлекаем EUR 2–15M.',
     'oht.inv.ask.h3': 'Инвестиционный запрос',
     'oht.inv.round':  'Тип раунда',
     'oht.inv.round.v':'Seed / Pre-Series A',
@@ -516,7 +516,7 @@ const TRANSLATIONS = {
     'ap.stat3.label': 'Navigare AR',
 
     'oht.subtitle':   'Studio Software Enterprise — 11 Produse',
-    'oht.desc':       'Compania din spatele XCLABEL. Owl Hoot Tech construiește software enterprise specializat în ERP, BI, RPA, logistică, accesibilitate și AR — vizând EUR 400B+ în piețe adresabile combinate.',
+    'oht.desc':       'Compania din spatele XCLABEL. Owl Hoot Tech construiește software enterprise specializat în ERP, BI, RPA, logistică, accesibilitate și AR — vizând USD 160B+ în piețe adresabile combinate.',
     'oht.btn':        'Află despre OHT',
     'oht.stat1.val':  '11+',
     'oht.stat1.label':'Produse',
@@ -680,7 +680,7 @@ const TRANSLATIONS = {
 
     'oht.h1':         'Owl Hoot Tech',
     'oht.h1.sub':     'Construim Software Enterprise al Viitorului — Astăzi.',
-    'oht.h1.p':       'Studio deep-tech european fondat în 2026, cu 11 produse software enterprise specializate în AR, parcare inteligentă, logistică, ERP, BI, RPA și accesibilitate. Piață adresabilă combinată de peste EUR 400B+.',
+    'oht.h1.p':       'Studio deep-tech european fondat în 2026, cu 11 produse software enterprise specializate în AR, parcare inteligentă, logistică, ERP, BI, RPA și accesibilitate. Piață adresabilă combinată de peste USD 160B+.',
     'oht.h1.btn1':    'Informații pentru Investitori',
     'oht.h1.btn2':    'Deveniți Partener',
     'oht.mission.h2': 'Misiunea Noastră',
@@ -690,7 +690,7 @@ const TRANSLATIONS = {
     'oht.products.h2':'Cele 11 Produse ale Noastre',
     'oht.products.sub':'Fiecare produs este cel mai bun instrument pentru sarcina sa — specializare profundă, cloud-native, standarde enterprise.',
     'oht.inv.h2':     'Pentru Investitori',
-    'oht.inv.sub':    'O oportunitate rară: 11 produse enterprise, TAM combinat EUR 400B+, căutăm EUR 2–15M finanțare seed.',
+    'oht.inv.sub':    'O oportunitate rară: 11 produse enterprise, TAM combinat USD 160B+, căutăm EUR 2–15M finanțare seed.',
     'oht.inv.ask.h3': 'Cererea de Investiție',
     'oht.inv.round':  'Tip de Rundă',
     'oht.inv.round.v':'Seed / Pre-Series A',
