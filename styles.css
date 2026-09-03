@@ -75,6 +75,19 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { font-family: var(--font); cursor: pointer; }
 
+/* ── Headline wrapping & keyboard focus (a11y + polish) ─────────────────── */
+h1, h2, h3 { text-wrap: balance; }
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.lang-btn:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--col-blue-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ── Layout ──────────────────────────────────────────────────────────────── */
 .container {
   width: 100%;
@@ -560,6 +573,27 @@ main { padding-top: 64px; }
   font-weight: var(--fw-bold);
   color: var(--col-blue-light);
   margin-bottom: 1rem;
+}
+
+.hero-landing-kicker {
+  font-size: 0.8rem;
+  font-weight: var(--fw-sem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--col-blue-light);
+  opacity: 0.85;
+  margin-bottom: 0.85rem;
+}
+.hero-landing .hero-actions {
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+.hero-landing .hero-meta {
+  justify-content: center;
+  margin-top: 1.25rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-landing-description {
   font-size: clamp(1rem, 1.4vw + 0.4rem, 1.15rem);

@@ -13,6 +13,12 @@ const TRANSLATIONS = {
     'idx.tagline':    'Revolutionary AR-Powered Solutions',
     'idx.desc':       'Patent-protected technology transforming digital networking and spatial experiences. Choose your solution below.',
     'idx.choose':     'Choose Your Solution',
+    'idx.kicker':     'Patent-Protected AR Technology',
+    'idx.cta1':       'Choose Your Solution',
+    'idx.cta2':       'Contact Us',
+    'idx.m1':         'Patent-protected · Marif Bergan',
+    'idx.m2':         'Face Recognition + BLE + AR',
+    'idx.m3':         '$50B+ combined market opportunity',
 
     // Index XCLABEL card
     'xc.subtitle':    'Digital Networking & AR Billboards',
@@ -261,6 +267,12 @@ const TRANSLATIONS = {
     'idx.tagline':    'Революционные AR-решения',
     'idx.desc':       'Запатентованная технология, трансформирующая цифровые коммуникации и пространственный опыт. Выберите решение ниже.',
     'idx.choose':     'Выберите решение',
+    'idx.kicker':     'Запатентованная AR-технология',
+    'idx.cta1':       'Выбрать решение',
+    'idx.cta2':       'Связаться с нами',
+    'idx.m1':         'Патент защищён · Marif Bergan',
+    'idx.m2':         'Распознавание лиц + BLE + AR',
+    'idx.m3':         'Рынок объёмом $50 млрд+',
 
     'xc.subtitle':    'Цифровые коммуникации и AR-билборды',
     'xc.desc':        'Мгновенное распознавание лиц + BLE = автоматические цифровые визитки + умные AR-билборды, которые невозможно заблокировать. Для предприятий, создателей контента, организаторов мероприятий и ритейла.',
@@ -500,6 +512,12 @@ const TRANSLATIONS = {
     'idx.tagline':    'Soluții AR Revoluționare',
     'idx.desc':       'Tehnologie brevetată care transformă rețelele digitale și experiențele spațiale. Alegeți soluția potrivită mai jos.',
     'idx.choose':     'Alegeți Soluția',
+    'idx.kicker':     'Tehnologie AR Brevetată',
+    'idx.cta1':       'Alegeți Soluția',
+    'idx.cta2':       'Contactați-ne',
+    'idx.m1':         'Brevet protejat · Marif Bergan',
+    'idx.m2':         'Recunoaștere Facială + BLE + AR',
+    'idx.m3':         'Piață de peste $50 mld.',
 
     'xc.subtitle':    'Networking Digital & Panouri AR',
     'xc.desc':        'Recunoaștere facială instantanee + BLE = cărți de vizită digitale automate + panouri AR inteligente care nu pot fi blocate. Pentru întreprinderi, creatori, evenimente și retail.',
@@ -757,3 +775,4 @@ function setLang(lang) {
   if (!TRANSLATIONS[saved]) saved = 'en';
   setLang(saved);
 })();
+
