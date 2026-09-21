@@ -776,3 +776,34 @@ function setLang(lang) {
   setLang(saved);
 })();
 
+
+// ── Mailto fallback: copy address + toast, without touching mailto nav ────
+// Runs alongside the browser's own mailto handling (never preventDefault),
+// so it only adds feedback — it can't break the link for anyone.
+function xcToast(msg) {
+  var old = document.getElementById('xc-toast');
+  if (old) old.remove();
+  var el = document.createElement('div');
+  el.id = 'xc-toast';
+  el.setAttribute('role', 'status');
+  el.textContent = msg;
+  document.body.appendChild(el);
+  requestAnimationFrame(function () { el.classList.add('show'); });
+  setTimeout(function () {
+    el.classList.remove('show');
+    setTimeout(function () { el.remove(); }, 300);
+  }, 3500);
+}
+
+function xcMailFallback(a) {
+  try {
+    var addr = decodeURIComponent(a.href.replace(/^mailto:/, '').split('?')[0]);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(function () {
+        xcToast('Email copied — ' + addr);
+      }).catch(function () { xcToast('Email: ' + addr); });
+    } else {
+      xcToast('Email: ' + addr);
+    }
+  } catch (e) { /* never block the mailto link */ }
+}
